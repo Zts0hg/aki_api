@@ -30,4 +30,6 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=6699, ssl_context=('xiaomingya.com.pem', 'xiaomingya.com.key'))
+    domain = 'xiaomingya.com'
+    domain = 'japanesejump.com'
+    app.run(host='0.0.0.0', port=6699, ssl_context=(f'{domain}.pem', f'{domain}.key'))
