@@ -6,7 +6,7 @@ app.config['JSON_AS_ASCII'] = False
 app.register_blueprint(example_blueprint, url_prefix='/grammar')
 
 
-@example_blueprint.route('/')
+@app.route('/')
 def index():
     return "Hello, World!"
 
