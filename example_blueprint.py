@@ -8,8 +8,14 @@ df = pd.read_json("grammar.json")
 @example_blueprint.route('/')
 def index():
     keyword = request.args.get('keyword')
-    df_res = df[df.content.str.contains(keyword) | df.hiragana.str.contains(keyword) | df.meaning.str.contains(keyword)]
 
+    if not keyword:
+        return jsonify({
+            "keyword": keyword,
+            "data": [],
+        })
+
+    df_res = df[df.content.str.contains(keyword) | df.hiragana.str.contains(keyword) | df.meaning.str.contains(keyword)]
     return jsonify({
         "keyword": keyword,
         "data": [df.loc[index].to_dict() for index in df_res.index],
