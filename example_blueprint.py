@@ -47,10 +47,13 @@ def report_error():
 
 @example_blueprint.route('/speak')
 def stream_audio():
+    audio_file = 'audio.mp3'  # Replace with your audio file path
+    mimetype = 'audio/mp3'  # Modify based on your audio file format
     content = request.args.get('content')
     print(content)
-    audio_file = 'audio.mp3'  # Replace with your audio file path
-    text_to_audio.generate_audio([(None, content)], audio_file)
-    mimetype = 'audio/mp3'  # Modify based on your audio file format
-    last_audio_content[0] = content
-    return send_file(audio_file, mimetype=mimetype, as_attachment=False)
+    if content == last_audio_content[0]:
+        text_to_audio.generate_audio([(None, content)], audio_file, overwrite=True)
+        last_audio_content[0] = content
+        return send_file(audio_file, mimetype=mimetype, as_attachment=False)
+    else:
+        return send_file(audio_file, mimetype=mimetype, as_attachment=False)
