@@ -70,7 +70,8 @@ name_to_voice_name = {
     "Yunxi": "zh-CN-YunxiNeural",
     "Yunhao": "zh-CN-YunhaoNeural",
     "Yunjian": "zh-CN-YunjianNeural",
-    "Yunze": "zh-CN-YunzeNeural"
+    "Yunze": "zh-CN-YunzeNeural",
+    "Mayu": "ja-JP-MayuNeural",
 }
 
 name_pattern = re.compile(fr"{'|'.join(sorted(name_to_voice_name.keys(), key=len, reverse=True))}")
