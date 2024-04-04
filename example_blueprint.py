@@ -1,3 +1,4 @@
+import json
 from flask import Blueprint, jsonify, request
 import pandas as pd
 from grammar_enumeration import grammars
@@ -25,3 +26,10 @@ def index():
         "keyword": keyword,
         "data": [df.loc[index].to_dict() for index in df_res.index],
     })
+
+
+@example_blueprint.route('/report_error', methods=["POST"])
+def report_error():
+    with open("/usr/local/grammar_error_report.json", "a", encoding="utf-8") as fp:
+        fp.write(json.dumps(request.form, ensure_ascii=False))
+    return jsonify({"form": request.form})
