@@ -1,9 +1,15 @@
-POST http://127.0.0.1:5000/grammar/report_error
-Content-Type: application/json
+GET https://japanesejump.com:6699/grammar/?keyword=ありがとうございます
 
-{ 
-    "content": "content"
-}
+
+###
+
+###
+GET https://japanesejump.com:6699/grammar/speak?content=ありがとうございます
+
+
+###
+GET https://japanesejump.com:6699/grammar/speak?content=hello
+
 
 ###
 POST https://japanesejump.com:6699/grammar/report_error
@@ -17,4 +23,6 @@ GET http://127.0.0.1:5000/grammar?keyword=hello
 
 ###
 GET http://127.0.0.1:5000/grammar/speak?content=ありがとうございます
-
+###
+GET http://127.0.0.1:5000/grammar/audio
+Content-Type: audio/mpeg

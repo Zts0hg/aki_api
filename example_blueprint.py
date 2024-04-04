@@ -1,12 +1,13 @@
 import os
 import json
-from flask import Blueprint, jsonify, request
+from flask import Blueprint, jsonify, request, send_file
 import pandas as pd
 from grammar_enumeration import grammars
 import text_to_audio
 import platform
 
 example_blueprint = Blueprint('example_blueprint', __name__)
+last_audio_content = ""
 # df = pd.read_json("grammar.json")
 df = pd.DataFrame(grammars)
 grammar_error_report_file_path = "/usr/local/grammar_error_report.json"
@@ -45,8 +46,14 @@ def report_error():
 
 
 @example_blueprint.route('/speak')
-def geneate_audio():
+def stream_audio():
     content = request.args.get('content')
     print(content)
-    text_to_audio.generate_audio([(None, content)], None)
-    return jsonify({"status": "success"})
+    if content != last_audio_content:
+        audio_file = 'audio.mp3'  # Replace with your audio file path
+        text_to_audio.generate_audio([(None, content)], audio_file)
+        mimetype = 'audio/mp3'  # Modify based on your audio file format
+        last_audio_content = content
+        return send_file(audio_file, mimetype=mimetype, as_attachment=False)
+    else:
+        return send_file(audio_file, mimetype=mimetype, as_attachment=False)

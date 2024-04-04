@@ -1,3 +1,9 @@
+"""
+云服务器上需如果出现报错 Exception with an error code: 0x38 (SPXERR_AUDIO_SYS_LIBRARY_NOT_FOUND), 需要运行以下命令
+wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.0g-2ubuntu4_amd64.deb
+sudo dpkg -i libssl1.1_1.1.0g-2ubuntu4_amd64.deb
+"""
+
 import os
 import time
 import sys
