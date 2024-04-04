@@ -7,7 +7,7 @@ import text_to_audio
 import platform
 
 example_blueprint = Blueprint('example_blueprint', __name__)
-last_audio_content = ""
+last_audio_content = [""]
 # df = pd.read_json("grammar.json")
 df = pd.DataFrame(grammars)
 grammar_error_report_file_path = "/usr/local/grammar_error_report.json"
@@ -49,11 +49,8 @@ def report_error():
 def stream_audio():
     content = request.args.get('content')
     print(content)
-    if content != last_audio_content:
-        audio_file = 'audio.mp3'  # Replace with your audio file path
-        text_to_audio.generate_audio([(None, content)], audio_file)
-        mimetype = 'audio/mp3'  # Modify based on your audio file format
-        last_audio_content = content
-        return send_file(audio_file, mimetype=mimetype, as_attachment=False)
-    else:
-        return send_file(audio_file, mimetype=mimetype, as_attachment=False)
+    audio_file = 'audio.mp3'  # Replace with your audio file path
+    text_to_audio.generate_audio([(None, content)], audio_file)
+    mimetype = 'audio/mp3'  # Modify based on your audio file format
+    last_audio_content[0] = content
+    return send_file(audio_file, mimetype=mimetype, as_attachment=False)

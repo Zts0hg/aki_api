@@ -4,7 +4,7 @@ GET https://japanesejump.com:6699/grammar/?keyword=ありがとうございま�
 ###
 
 ###
-GET https://japanesejump.com:6699/grammar/speak?content=ありがとうございます
+GET https://japanesejump.com:6699/grammar/speak?content=このマラソン大会には、性別、年齢を問わず、
 
 
 ###
