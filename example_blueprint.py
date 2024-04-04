@@ -51,7 +51,7 @@ def stream_audio():
     mimetype = 'audio/mp3'  # Modify based on your audio file format
     content = request.args.get('content')
     print(content)
-    if content == last_audio_content[0]:
+    if content != last_audio_content[0]:
         text_to_audio.generate_audio([(None, content)], audio_file, overwrite=True)
         last_audio_content[0] = content
         return send_file(audio_file, mimetype=mimetype, as_attachment=False)
