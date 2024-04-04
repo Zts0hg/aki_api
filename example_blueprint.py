@@ -52,7 +52,7 @@ def stream_audio():
     content = request.args.get('content')
     print(content)
     if content != last_audio_content[0]:
-        text_to_audio.generate_audio([("Mayu", content)], audio_file, overwrite=True, xml_lang="ja-JP")
+        text_to_audio.generate_audio([("Xiaochen", content)], audio_file, overwrite=True, xml_lang="ja-JP")
         last_audio_content[0] = content
         return send_file(audio_file, mimetype=mimetype, as_attachment=False)
     else:
