@@ -1,3 +1,4 @@
+import os
 import json
 from flask import Blueprint, jsonify, request
 import pandas as pd
@@ -6,6 +7,10 @@ from grammar_enumeration import grammars
 example_blueprint = Blueprint('example_blueprint', __name__)
 # df = pd.read_json("grammar.json")
 df = pd.DataFrame(grammars)
+grammar_error_report_file_path = "/usr/local/grammar_error_report.json"
+if not os.path.exists(grammar_error_report_file_path):
+    with open(grammar_error_report_file_path, "w", encoding="utf-8") as fp:
+        """create empty file"""
 
 
 @example_blueprint.route('/')
@@ -30,6 +35,7 @@ def index():
 
 @example_blueprint.route('/report_error', methods=["POST"])
 def report_error():
-    with open("/usr/local/grammar_error_report.json", "a", encoding="utf-8") as fp:
-        fp.write(json.dumps(request.form, ensure_ascii=False))
-    return jsonify({"form": request.form})
+    data = request.get_json()
+    with open(grammar_error_report_file_path, "a", encoding="utf-8") as fp:
+        fp.write(json.dumps(data, ensure_ascii=False) + "\n")
+    return jsonify({"data": data})
