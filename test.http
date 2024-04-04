@@ -4,3 +4,11 @@ Content-Type: application/json
 { 
     "content": "content"
 }
+
+###
+POST https://japanesejump.com:6699/grammar/report_error
+Content-Type: application/json
+
+{ 
+    "content": "content"
+}
