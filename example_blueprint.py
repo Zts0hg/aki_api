@@ -3,12 +3,15 @@ import json
 from flask import Blueprint, jsonify, request
 import pandas as pd
 from grammar_enumeration import grammars
+import text_to_audio
+import platform
 
 example_blueprint = Blueprint('example_blueprint', __name__)
 # df = pd.read_json("grammar.json")
 df = pd.DataFrame(grammars)
 grammar_error_report_file_path = "/usr/local/grammar_error_report.json"
-if not os.path.exists(grammar_error_report_file_path):
+
+if platform.system().casefold() != "windows" and not os.path.exists(grammar_error_report_file_path):
     with open(grammar_error_report_file_path, "w", encoding="utf-8") as fp:
         """create empty file"""
 
@@ -39,3 +42,11 @@ def report_error():
     with open(grammar_error_report_file_path, "a", encoding="utf-8") as fp:
         fp.write(json.dumps(data, ensure_ascii=False) + "\n")
     return jsonify({"data": data})
+
+
+@example_blueprint.route('/speak')
+def geneate_audio():
+    content = request.args.get('content')
+    print(content)
+    text_to_audio.generate_audio([(None, content)], None)
+    return jsonify({"status": "success"})

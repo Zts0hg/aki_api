@@ -12,3 +12,9 @@ Content-Type: application/json
 { 
     "content": "content"
 }
+###
+GET http://127.0.0.1:5000/grammar?keyword=hello
+
+###
+GET http://127.0.0.1:5000/grammar/speak?content=ありがとうございます
+
