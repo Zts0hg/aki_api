@@ -17,7 +17,7 @@ openai_config = {
     # "openai_api_base": "https://ai-test-for-aki.openai.azure.com/",
     "openai_api_base": "https://shibainu.openai.azure.com/",
     "openai_api_version": "2023-07-01-preview",
-    "openai_api_key": os.environ.get("OPENAI_API_KEY"),
+    "openai_api_key": os.environ.get("AKI_API_OPENAI_API_KEY"),
 }
 openai.api_type = openai_config["openai_api_type"]
 openai.api_base = openai_config["openai_api_base"]

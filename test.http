@@ -19,6 +19,13 @@ Content-Type: application/json
     "content": "content"
 }
 ###
+POST https://japanesejump.com:6699/grammar/analyze
+Content-Type: application/json
+
+{ 
+    "content": "ここに車を止められるのは、許可をもらっている人（a だけ　b に限り）です。"
+}
+###
 GET http://127.0.0.1:5000/grammar?keyword=hello
 
 ###
