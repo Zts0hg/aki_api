@@ -5,7 +5,10 @@ import pandas as pd
 from grammar_enumeration import grammars
 import text_to_audio
 import platform
+from assistant import Assistant
+import re
 
+question_pattern = re.compile(r"[（(](?:[\da-n]\s*[~\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF]+\s*)+[)）]")
 example_blueprint = Blueprint('example_blueprint', __name__)
 last_audio_content = [""]
 # df = pd.read_json("grammar.json")
@@ -43,6 +46,19 @@ def report_error():
     with open(grammar_error_report_file_path, "a", encoding="utf-8") as fp:
         fp.write(json.dumps(data, ensure_ascii=False) + "\n")
     return jsonify({"data": data})
+
+
+@example_blueprint.route('/analyze', methods=["POST"])
+def analyze_sentence():
+    data = request.get_json()
+    content = data["content"]
+    content = re.sub("\s+", " ", content)
+    if question_pattern.search(content):
+        process_method = Assistant.answer_question
+    else:
+        process_method = Assistant.analyze_sentence
+
+    return jsonify({"data": process_method(content=content)})
 
 
 @example_blueprint.route('/speak')
