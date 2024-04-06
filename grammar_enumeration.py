@@ -4481,6 +4481,6 @@ if __name__ == '__main__':
     df = pd.DataFrame(grammars)
     df["id"] = df.index
     df = df.reindex(["id", "content", "hiragana", "meaning", "usage", "example", "remark", "source"], axis=1)
-    print(df[df.meaning.str.contains("S1N106")  | (df.source.str == "S1N106")])
+    print(df[df.meaning.str.contains("S1N106")  | (df.source == "S1N106")])
     with open("grammar.json", "w", encoding="utf-8") as fp:
         df.to_json(fp, orient="records", indent=4, force_ascii=False)
