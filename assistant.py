@@ -51,6 +51,9 @@ class Assistant:
 
     question_answering_prompt_template = """
     analyze the following Japanese question and tell me which option is best for chosen answer and explain the reason using Chinese:
+    (notice: the lowercase alphabet, such as a, b, c, or digit in the brackets is just a sequence mark of options, not a part of option)
+    requirement 1: you should use Chinese to reply.
+    requirement 2: you can explain why the option is best or other option is not best from grammar correctness, meaning, context or other aspects.
     ---
     {content}
     """
@@ -78,6 +81,7 @@ class Assistant:
         result: str = cls.question_answering_chain.run({
             "content": content,
         })
+        return result
 
     @classmethod
     def judge_relevance(cls, content, topic="japanese learning"):
@@ -87,3 +91,8 @@ class Assistant:
         })
 
         return result == "Y"
+
+
+if __name__ == "__main__":
+    content = "ここに車を止められるのは、許可をもらっている人（a だけ b に限り）です。"
+    print(Assistant.answer_question(content=content))
