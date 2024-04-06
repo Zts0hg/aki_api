@@ -58,7 +58,14 @@ def analyze_sentence():
     else:
         process_method = Assistant.analyze_sentence
 
-    return jsonify({"data": process_method(content=content)})
+    result = process_method(content=content)
+    print("=" * 32)
+    print(content)
+    print(process_method.__name__)
+    print(result)
+    print("=" * 32)
+
+    return jsonify({"data": result})
 
 
 @example_blueprint.route('/speak')
