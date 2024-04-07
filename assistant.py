@@ -26,7 +26,7 @@ openai.api_key = openai_config["openai_api_key"]
 
 
 class Assistant:
-    llm = AzureChatOpenAI(deployment_name=deployment, model_name=model, temperature=0, max_tokens=200, **openai_config)
+    llm = AzureChatOpenAI(deployment_name=deployment, model_name=model, temperature=0, max_tokens=2000, **openai_config)
     translating_prompt_template = """translate "{content}" into {target_language}:"""
     translating_chain = LLMChain(llm=llm, prompt=PromptTemplate.from_template(translating_prompt_template), output_key="translated")
 
