@@ -43,7 +43,8 @@ class Assistant:
     classifying_chain = LLMChain(llm=llm, prompt=PromptTemplate.from_template(classifying_prompt_template), output_key="relevance")
 
     sentence_analyzing_prompt_template = """
-    analyze the following Japanese sentence and explain the used grammar and words using Chinese:
+    analyze the following Japanese sentence and explain the used grammar and words:
+    requirement 1: you should use Chinese to reply.
     ---
     {content}
     """
