@@ -12,7 +12,9 @@ question_pattern = re.compile(r"[（(](?:[\da-n]\s*[~\u3040-\u309F\u30A0-\u30FF\
 example_blueprint = Blueprint('example_blueprint', __name__)
 last_audio_content = [""]
 # df = pd.DataFrame(grammars)
-df = pd.read_json("grammar.json", dtype=str)
+with open("grammar.json", "r", encoding="utf-8") as f:
+    data = json.loads(f.read())
+    df = pd.DataFrame(data)
 grammar_error_report_file_path = "/usr/local/grammar_error_report.json"
 
 if platform.system().casefold() != "windows" and not os.path.exists(grammar_error_report_file_path):

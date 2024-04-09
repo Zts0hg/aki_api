@@ -5127,5 +5127,6 @@ if __name__ == '__main__':
 
     print(f"Shape: {df.shape}")
     print(df[df.meaning.str.contains("S1N106") | (df.source == "S1N106")])
+    df.to_json("grammar_pd.json", orient="records", indent=4, force_ascii=False)
     with open("grammar.json", "w", encoding="utf-8") as fp:
         df.to_json(fp, orient="records", indent=4, force_ascii=False)
