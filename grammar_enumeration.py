@@ -6121,38 +6121,41 @@ B 強調自己所作的行為,但是••••••而已,沒有深展的意�
         "usage": "名 + を禁じ得ない",
         "remark": """接在包含感情意义的名词后。主语一般为第一人称,但通常不出现在句子中。""",
         "source": "S1N120",
-    },{
-    "content": "〜を余儀なくされる/~を余儀なくさせる",
-    "hiragana": "〜をよぎなくされる/~をよぎなくさせる",
-    "meaning": """⇒ ある事情によりどうしても~しなければならなくなる/ある事情が~という状況に追い込む。 硬い言い方
+    },
+    {
+        "content": "〜を余儀なくされる/~を余儀なくさせる",
+        "hiragana": "〜をよぎなくされる/~をよぎなくさせる",
+        "meaning": """⇒ ある事情によりどうしても~しなければならなくなる/ある事情が~という状況に追い込む。 硬い言い方
 由于某神原因,无论如何都必須做...... / 受某神原因的逼迫,到了······这祥一神状況。 书面語。""",
-    "example": [
-        {
+        "example": [{
             "content": "① 中川選手はまだ若いが、 度重なるけがにより引退を余儀なくされた。",
             "hiragana": "",
             "meaning": "运动员中川虽然还年轻,但因为一次又一次的伤病被迫选择退役。"
-        },
-        {
+        }, {
             "content": "② 彼は病気で入院を余儀なくされている間に、この小説を執筆した。",
             "hiragana": "",
             "meaning": "他在因病不得不住院的那段时间,执笔完成了这部小说。"
-        },
-        {
+        }, {
             "content": "③ 相次ぐ企業の倒産が失業者の増加を余儀なくさせた。",
             "hiragana": "",
             "meaning": "接二连三的企业破产,迫使失业者不断增加。"
-        },
-        {
+        }, {
             "content": "④ 諸外国の圧力が貿易自由化を余儀なくさせた。",
             "hiragana": "",
             "meaning": "诸多外国列强施加压力,被迫实施了贸易自由化。"
-        }
-    ],
-    "usage": "名 + を余儀なくされる/を余儀なくさせる",
-    "remark": """「~を余儀なくされる」的主語一般是人, 「~を余儀なくさせる」的主語一般是人以外的“某个事情”。""",
-    "source": "S1N120",
+        }],
+        "usage": "名 + を余儀なくされる/を余儀なくさせる",
+        "remark": """「~を余儀なくされる」的主語一般是人, 「~を余儀なくさせる」的主語一般是人以外的“某个事情”。""",
+        "source": "S1N120",
     },
 ]
+
+amount = [5, 6, 5, 6, 4, 5, 5, 5, 5, 4, 5, 5, 5, 6, 6, 5, 5, 6, 6, 6, 6, 6, 7, 6, 5, 6]
+sources = []
+for idx, count in enumerate(amount):
+    sources.extend([f"S1N2{idx+1:02}" for _ in range(count)])
+for index, source in enumerate(sources):
+    grammars[index]["source"] = source
 
 df_grammars = pd.DataFrame(grammars)
 df_grammars["id"] = df_grammars.index
@@ -6169,7 +6172,6 @@ for index in df_grammars.index:
 
 if __name__ == '__main__':
     print(f"Shape: {df_grammars.shape}")
-    print(df_grammars[df_grammars.meaning.str.contains("S1N106") | (df_grammars.source == "S1N106")])
     df_grammars.to_json("grammar.json", orient="records", indent=4, force_ascii=False)
     # with open("grammar.json", "w", encoding="utf-8") as fp:
     #     df_grammars.to_json(fp, orient="records", indent=4, force_ascii=False)
