@@ -5112,21 +5112,23 @@ B 无法明确……
     },
 ]
 
-if __name__ == '__main__':
-    df = pd.DataFrame(grammars)
-    df["id"] = df.index
-    df = df.reindex(["id", "content", "hiragana", "meaning", "usage", "example", "remark", "source"], axis=1)
-    for index in df.index:
-        parts = [part for part in df.loc[index, "meaning"].split("\n") if part.strip()]
-        if len(parts) != 2:
-            df.loc[index, "japanese_meaning"] = "\n".join(parts[0::2])
-            df.loc[index, "chinese_meaning"] = "\n".join([f"{chr(ord('A') + idx)} {meaning}" for idx, meaning in enumerate(parts[1::2])])
-        else:
-            df.loc[index, "japanese_meaning"] = parts[0]
-            df.loc[index, "chinese_meaning"] = parts[1]
 
-    print(f"Shape: {df.shape}")
-    print(df[df.meaning.str.contains("S1N106") | (df.source == "S1N106")])
-    df.to_json("grammar_pd.json", orient="records", indent=4, force_ascii=False)
+
+df_grammars = pd.DataFrame(grammars)
+df_grammars["id"] = df_grammars.index
+df_grammars = df_grammars.reindex(["id", "content", "hiragana", "meaning", "usage", "example", "remark", "source"], axis=1)
+for index in df_grammars.index:
+    parts = [part for part in df_grammars.loc[index, "meaning"].split("\n") if part.strip()]
+    if len(parts) != 2:
+        df_grammars.loc[index, "japanese_meaning"] = "\n".join(parts[0::2])
+        df_grammars.loc[index, "chinese_meaning"] = "\n".join([f"{chr(ord('A') + idx)} {meaning}" for idx, meaning in enumerate(parts[1::2])])
+    else:
+        df_grammars.loc[index, "japanese_meaning"] = parts[0]
+        df_grammars.loc[index, "chinese_meaning"] = parts[1]
+
+if __name__ == '__main__':
+    print(f"Shape: {df_grammars.shape}")
+    print(df_grammars[df_grammars.meaning.str.contains("S1N106") | (df_grammars.source == "S1N106")])
+    df_grammars.to_json("grammar_pd.json", orient="records", indent=4, force_ascii=False)
     with open("grammar.json", "w", encoding="utf-8") as fp:
-        df.to_json(fp, orient="records", indent=4, force_ascii=False)
+        df_grammars.to_json(fp, orient="records", indent=4, force_ascii=False)
