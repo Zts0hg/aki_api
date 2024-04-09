@@ -4,7 +4,8 @@ grammars = [
     {
         "content": "~ 際 (に)",
         "hiragana": "~ さい(に)",
-        "meaning": "~とき 硬い言い方（…………时候。书面语。）",
+        "meaning": """~とき 硬い言い方
+（…………时候。书面语。）""",
         "usage": "名の・動 辞書形/た形 + 際(に)",
         "example": [{
             "content": "① この整理券は、 商品受け取りの際、必要です。",
@@ -3914,7 +3915,7 @@ B 非常强烈地感到....... 感叹......、惊讶……。
     },
     {
         "content": "~に至るまで",
-        "hiragana": "",
+        "hiragana": "~にいたるまで",
         "meaning": """⇒~という意外なことにまで、 あることの範囲が及ぶ。
 某事范围波及到令人意外的事情上。""",
         "example": [{
@@ -5115,6 +5116,16 @@ if __name__ == '__main__':
     df = pd.DataFrame(grammars)
     df["id"] = df.index
     df = df.reindex(["id", "content", "hiragana", "meaning", "usage", "example", "remark", "source"], axis=1)
+    for index in df.index:
+        parts = [part for part in df.loc[index, "meaning"].split("\n") if part.strip()]
+        if len(parts) != 2:
+            df.loc[index, "japanese_meaning"] = "\n".join(parts[0::2])
+            df.loc[index, "chinese_meaning"] = "\n".join([f"{chr(ord('A') + idx)} {meaning}" for idx, meaning in enumerate(parts[1::2])])
+        else:
+            df.loc[index, "japanese_meaning"] = parts[0]
+            df.loc[index, "chinese_meaning"] = parts[1]
+
+    print(f"Shape: {df.shape}")
     print(df[df.meaning.str.contains("S1N106") | (df.source == "S1N106")])
     with open("grammar.json", "w", encoding="utf-8") as fp:
         df.to_json(fp, orient="records", indent=4, force_ascii=False)

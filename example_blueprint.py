@@ -2,7 +2,7 @@ import os
 import json
 from flask import Blueprint, jsonify, request, send_file
 import pandas as pd
-from grammar_enumeration import grammars
+# from grammar_enumeration import grammars
 import text_to_audio
 import platform
 from assistant import Assistant
@@ -11,8 +11,8 @@ import re
 question_pattern = re.compile(r"[（(](?:[\da-n]\s*[~\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF]+\s*)+[)）]")
 example_blueprint = Blueprint('example_blueprint', __name__)
 last_audio_content = [""]
-# df = pd.read_json("grammar.json")
-df = pd.DataFrame(grammars)
+# df = pd.DataFrame(grammars)
+df = pd.read_json("grammar.json", dtype=str)
 grammar_error_report_file_path = "/usr/local/grammar_error_report.json"
 
 if platform.system().casefold() != "windows" and not os.path.exists(grammar_error_report_file_path):
@@ -33,7 +33,7 @@ def index():
     if keyword == "akiakiaki":
         df_res = df
     else:
-        df_res = df[df.content.str.contains(keyword) | df.hiragana.str.contains(keyword) | df.meaning.str.contains(keyword) | (df.source == keyword)]
+        df_res = df[df.content.str.contains(keyword) | df.hiragana.str.contains(keyword) | df.chinese_meaning.str.contains(keyword) | (df.source == keyword)]
     return jsonify({
         "keyword": keyword,
         "data": [df.loc[index].to_dict() for index in df_res.index],
