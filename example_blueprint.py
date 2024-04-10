@@ -34,7 +34,8 @@ def index():
     else:
         []
 
-        df_res = df[df.content.str.replace("[（）()\s]", "").str.contains(keyword) | df.hiragana.str.replace("[（）()\s]", "").str.contains(keyword)
+        df_res = df[df.content.str.replace(r"[（）()\s()]", "").str.contains(keyword)
+                    | df.hiragana.str.replace(r"[（）()\s()]", "").str.contains(keyword)
                     | df.chinese_meaning.str.contains(keyword) | (df.source == keyword)]
     return jsonify({
         "keyword": keyword,
