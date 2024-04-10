@@ -6158,7 +6158,7 @@ for index, source in enumerate(sources):
     grammars[index]["source"] = source
 
 df_grammars = pd.DataFrame(grammars)
-df_grammars["id"] = df_grammars.index
+df_grammars["id"] = df_grammars.index.astype(str)
 df_grammars = df_grammars.reindex(["id", "content", "hiragana", "meaning", "usage", "example", "remark", "source"], axis=1)
 for index in df_grammars.index:
     parts = [part for part in df_grammars.loc[index, "meaning"].split("\n") if part.strip()]
