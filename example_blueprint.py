@@ -90,8 +90,8 @@ def stream_audio():
     audio_file = 'audio.mp3'  # Replace with your audio file path
     mimetype = 'audio/mp3'  # Modify based on your audio file format
     content = request.args.get('content')
-    print(content)
     content_md5 = get_md5(RE_WHITESPACES_PATTERN.sub(" ", content))
+    print(content)
     print(content_md5)
     audio_file_path = os.path.join(os.getcwd(), "japanese_grammar", "audio", f"{content_md5}.mp3")
     if os.path.exists(audio_file_path):
