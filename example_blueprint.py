@@ -92,6 +92,7 @@ def stream_audio():
     content = request.args.get('content')
     print(content)
     content_md5 = get_md5(RE_WHITESPACES_PATTERN.sub(" ", content))
+    print(content_md5)
     audio_file_path = os.path.join(os.getcwd(), "japanese_grammar", "audio", f"{content_md5}.mp3")
     if os.path.exists(audio_file_path):
         return send_file(audio_file_path, mimetype=mimetype, as_attachment=False)
