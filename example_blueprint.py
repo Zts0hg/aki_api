@@ -9,6 +9,8 @@ from assistant import Assistant
 import re
 import hashlib
 
+RE_WHITESPACES_PATTERN = re.compile(r"\s+")
+
 
 def get_md5(content):
     content = content.encode("utf-8")
@@ -89,7 +91,7 @@ def stream_audio():
     mimetype = 'audio/mp3'  # Modify based on your audio file format
     content = request.args.get('content')
     print(content)
-    content_md5 = get_md5(content)
+    content_md5 = get_md5(RE_WHITESPACES_PATTERN.sub(" ", content))
     audio_file_path = os.path.join(os.getcwd(), "japanese_grammar", "audio", f"{content_md5}.mp3")
     if os.path.exists(audio_file_path):
         return send_file(audio_file_path, mimetype=mimetype, as_attachment=False)
