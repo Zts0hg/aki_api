@@ -7,6 +7,15 @@ import text_to_audio
 import platform
 from assistant import Assistant
 import re
+import hashlib
+
+
+def get_md5(content):
+    content = content.encode("utf-8")
+    md5_hash = hashlib.md5()
+    md5_hash.update(content)
+    return md5_hash.hexdigest()
+
 
 question_pattern = re.compile(r"[（(](?:[\da-n]\s*[~\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF]+\s*)+[)）]")
 example_blueprint = Blueprint('example_blueprint', __name__)
@@ -80,6 +89,11 @@ def stream_audio():
     mimetype = 'audio/mp3'  # Modify based on your audio file format
     content = request.args.get('content')
     print(content)
+    content_md5 = get_md5(content)
+    audio_file_path = os.path.join(os.getcwd(), "japanese_grammar", "audio", f"{content_md5}.mp3")
+    if os.path.exists(audio_file_path):
+        return send_file(audio_file_path, mimetype=mimetype, as_attachment=False)
+
     if content != last_audio_content[0]:
         text_to_audio.generate_audio([("多语言模型", content)], audio_file, overwrite=True, xml_lang="ja-JP")
         last_audio_content[0] = content
