@@ -46,9 +46,11 @@ def index():
     if keyword == "akiakiaki":
         df_res = df
     else:
-        df_res = df[df.content.str.replace(r"[（）()\s]", "", regex=True).str.contains(keyword)
-                    | df.hiragana.str.replace(r"[（）()\s]", "", regex=True).str.contains(keyword)
-                    | df.chinese_meaning.str.contains(keyword) | (df.source == keyword)]
+        df_res = df
+        for item in keyword.split():
+            df_res = df_res[df_res.content.str.replace(r"[（）()\s]", "", regex=True).str.contains(item)
+                            | df_res.hiragana.str.replace(r"[（）()\s]", "", regex=True).str.contains(item)
+                            | df_res.chinese_meaning.str.contains(item) | (df_res.source == item)]
 
     print(f"Search {df_res.shape[0]} records for keyword {keyword}")
     return jsonify({
