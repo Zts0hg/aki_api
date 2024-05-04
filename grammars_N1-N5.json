@@ -6170,7 +6170,7 @@
         "content": "～あまり（に）",
         "hiragana": "",
         "meaning": "表示由于程度过甚，导致（了）某种结果。“由于过度……因而……”。",
-        "usage": "",
+        "usage": "動辞書形 / ナ形語幹-な / 名の + あまり(に)",
         "example": [
             {
                 "content": "① 何でも<ruby>完<rt>かん</rt></ruby><ruby>全<rt>ぜん</rt></ruby>にやろうと思うあまりに 、体を壊す人がいる。 ",
@@ -6199,7 +6199,7 @@
         "content": "～以上（は）",
         "hiragana": "～いじょう（は）",
         "meaning": "前项表示确定的事实，“既然……就……”。",
-        "usage": "",
+        "usage": "動·イ形·ナ形の名詞修飾形 / ナ形語幹·名-である + 以上 (は)",
         "example": [
             {
                 "content": "① エネルギーの問題がこれほど<ruby>深<rt>しん</rt></ruby><ruby>刻<rt>こく</rt></ruby>になった以上 、世界<ruby>各<rt>かっ</rt></ruby><ruby>国<rt>こく</rt></ruby>が<ruby>協<rt>きょう</rt></ruby><ruby>力<rt>りょく</rt></ruby>して、ただちに<ruby>対<rt>たい</rt></ruby><ruby>策<rt>さく</rt></ruby>をたてるべきだ。 ",
@@ -6388,7 +6388,7 @@
         "content": "～限り（は）/限りでは",
         "hiragana": "～かぎり（は）/限りでは",
         "meaning": "① 表示最大限度，“尽量……”“竭尽……”。\n② 表示条件，“只要……就……”。\n表示在某个限定的范围之内，“据……所知”“据……调查”等。",
-        "usage": "① 動辞書形·可能形/名－の＋限り\n動辞書形·た形·ている形＋限りでは",
+        "usage": "① 動辞書形·可能形/名－の＋限り\n② 動辞書形・ている形 / イ形辞書形 / ナ形語幹-な·である / 名-の·である + 限り ( は )\n動辞書形·た形·ている形＋限りでは",
         "example": [
             {
                 "content": "① 父は仕事が生きがいで、<ruby>定<rt>てい</rt></ruby><ruby>年<rt>ねん</rt></ruby><ruby>後<rt>ご</rt></ruby>も働ける限りは 働きたいと言っている。 ",
@@ -6534,7 +6534,7 @@
         "content": "～かというと/かといえば",
         "hiragana": "",
         "meaning": "“至于是否……”“是不是……就……”。",
-        "usage": "",
+        "usage": "動普通形·イ形 （-の) / ナ形語幹·名(+ なの) + かというと/かといえば",
         "example": [
             {
                 "content": "①<ruby>文<rt>ぶん</rt></ruby><ruby>章<rt>しょう</rt></ruby>がうまければ誰でも作家になれるかというと 、そんなことはない。 ",
@@ -6820,7 +6820,7 @@
         "content": "～からには",
         "hiragana": "",
         "meaning": "“既然……就……”。",
-        "usage": "",
+        "usage": "動 / イ形普通形 / ナ形語幹·名-である + からには",
         "example": [
             {
                 "content": "① いったん引き受けたからには 、<ruby>納<rt>なっ</rt></ruby><ruby>得<rt>とく</rt></ruby>できる仕事をしたい。 ",
@@ -6995,7 +6995,7 @@
         "content": "～ことから",
         "hiragana": "",
         "meaning": "表示原因或依据。“因为……”；“从……来看”。",
-        "usage": "",
+        "usage": "動 / イ形の名詞修飾形 / ナ形語幹+な·である / 名-である + ことから",
         "example": [
             {
                 "content": "① 彼は何でもよく知っていることから 、友達に「 博<ruby>士<rt>はかせ</rt></ruby>」 と呼ばれている。 ",
@@ -7169,7 +7169,7 @@
         "content": "～際は/際に（は）",
         "hiragana": "～さいは/際に（は）",
         "meaning": "“在……时候”；“借……时机”。",
-        "usage": "",
+        "usage": "動辞書形・た形 / 名-の + 際は/際に(は)",
         "example": [
             {
                 "content": "①<ruby>外<rt>がい</rt></ruby><ruby>出<rt>しゅつ</rt></ruby>する際は 、必ず鍵をかけるようにしてください。 ",
@@ -7402,7 +7402,7 @@
         "content": "～だけあって/だけに/だけのことはある",
         "hiragana": "",
         "meaning": "① “与……相称”“不愧是……”；“到底没白……”。\n② “正因为……更加……”。\n③ “正因为……反倒……”。",
-        "usage": "",
+        "usage": "① 動·イ形·ナ形の名詞修飾形 / 名 + だけあって/だけに/だけのことはある\n② 動·イ形·ナ形の名詞修飾形 / 名 + だけに\n③ 動·イ形·ナ形の名詞修飾形 / 名 + だけに",
         "example": [
             {
                 "content": "① 多くの<ruby>観<rt>かん</rt></ruby><ruby>光<rt>こう</rt></ruby><ruby>客<rt>きゃく</rt></ruby>が<ruby>訪<rt>おとず</rt></ruby>れるだけあって 、確かに山からの眺めはすばらしかった。 ",
@@ -7577,7 +7577,7 @@
         "content": "～ついでに",
         "hiragana": "",
         "meaning": "“顺便……”。",
-        "usage": "",
+        "usage": "動辞書形・た形 / 名-の + ついでに",
         "example": [
             {
                 "content": "①<ruby>展<rt>てん</rt></ruby><ruby>覧<rt>らん</rt></ruby><ruby>会<rt>かい</rt></ruby>に行ったついでに 近くの公園をぶらぶら散歩してきた。 ",
@@ -8071,7 +8071,7 @@
         "content": "～というより",
         "hiragana": "",
         "meaning": "“与其说……，还不如说……”。",
-        "usage": "",
+        "usage": "文の普通形 / ナ形語幹·名 + というより",
         "example": [
             {
                 "content": "① 駅から家までバスに乗らずに歩くのは、<ruby>節<rt>せつ</rt></ruby><ruby>約<rt>やく</rt></ruby>というより<ruby>健<rt>けん</rt></ruby><ruby>康<rt>こう</rt></ruby>のためだ。 ",
@@ -8435,7 +8435,7 @@
         "content": "～とともに",
         "hiragana": "",
         "meaning": "表示伴随，“随着……”“与……的同时”。",
-        "usage": "",
+        "usage": "動辞書形 / イ形 / 名 / ナ形語幹·名-である + とともに",
         "example": [
             {
                 "content": "① ことばは生き物であると言われる。時代の<ruby>移<rt>うつ</rt></ruby>り<ruby>変<rt>か</rt></ruby>わりとともに 、<ruby>語<rt>ご</rt></ruby>の<ruby>形<rt>かたち</rt></ruby>や<ruby>意<rt>い</rt></ruby><ruby>味<rt>み</rt></ruby>が少しずつ変化する。 ",
@@ -8522,7 +8522,7 @@
         "content": "～ないことには",
         "hiragana": "",
         "meaning": "“如果不……（就不……）”。",
-        "usage": "",
+        "usage": "動ない形 / イ形ない形 / ナ形語幹·名-で + ないことには",
         "example": [
             {
                 "content": "①<ruby>事<rt>じ</rt></ruby><ruby>実<rt>じつ</rt></ruby>を<ruby>確<rt>かく</rt></ruby><ruby>認<rt>にん</rt></ruby>しないことには 、<ruby>何<rt>なん</rt></ruby>とも<ruby>申<rt>もう</rt></ruby>し<ruby>上<rt>あ</rt></ruby>げられません。 ",
@@ -8551,7 +8551,7 @@
         "content": "～ないことはない/ないこともない",
         "hiragana": "",
         "meaning": "表示有某种可能性，“不是不……”“有可能……”。",
-        "usage": "",
+        "usage": "動ない形 / イ形ない形 / ナ形語幹·名-で + ないことはない/ないこともない",
         "example": [
             {
                 "content": "① 「<ruby>山<rt>やま</rt></ruby><ruby>田<rt>だ</rt></ruby>さんのふるさとは雪がたくさん降るところだから、スキーはお得意でしょ。」\n「うーん、できないことはない けど、もう何年もやってないから…。」 ",
@@ -8580,7 +8580,7 @@
         "content": "～ないではない/ないでもない",
         "hiragana": "",
         "meaning": "表示并非完全没有，“并非不……”“也不是不……”。",
-        "usage": "",
+        "usage": "動ない形 / イ形ない形 / ナ形語幹-で / 名-が + ないではない/ないでもない",
         "example": [
             {
                 "content": "① 彼の論文は、<ruby>構<rt>こう</rt></ruby><ruby>成<rt>せい</rt></ruby>にはまだ少し問題がある気がしないでもない が、内容<ruby>自<rt>じ</rt></ruby><ruby>体<rt>たい</rt></ruby>はだいぶよくなったと思う。 ",
@@ -8638,7 +8638,7 @@
         "content": "～なくはない/なくもない",
         "hiragana": "",
         "meaning": "表示并不是完全没有某种事情，“不是不……”。",
-        "usage": "",
+        "usage": "動ない形 / ナ形語幹-で / イ形ない形 / 名-が·は + なくはない/なくもない",
         "example": [
             {
                 "content": "① 子供「自分のパソコンが欲しいよ。ねえ、駄目？」\n母親「ゲームじゃなくて勉強に使うんなら、考えなくもない けど。」 ",
@@ -8754,7 +8754,7 @@
         "content": "～に（は）かかわらず/に（は）かかわりなく",
         "hiragana": "",
         "meaning": "“不管……”“无论……”。",
-        "usage": "",
+        "usage": "動辞書形・ない形-ない / イ形辞書形・ない形-ない / ナ形語幹(−である) / 名 + に(は)かかわらず/に(は)かかわりなく",
         "example": [
             {
                 "content": "① 好きか嫌いかにかかわらず 、この仕事は必ずしなければならない。 ",
@@ -8943,7 +8943,7 @@
         "content": "～に決まっている",
         "hiragana": "～にきまっている",
         "meaning": "表示比较确切的推测，“一定……”“肯定……”。",
-        "usage": "",
+        "usage": "動·イ形普通形 / ナ形語幹 / 名 + に決まっている",
         "example": [
             {
                 "content": "① 同じ値段なら、<ruby>質<rt>しつ</rt></ruby>がいいほうがたくさん売れるに決まっている 。 ",
@@ -9161,7 +9161,7 @@
         "content": "～にしては",
         "hiragana": "",
         "meaning": "表示评价的标准，“就……而言”。",
-        "usage": "",
+        "usage": "動·イ形普通形 / ナ形語幹 / 名 + にしては",
         "example": [
             {
                 "content": "① この子は小学生にしては ずいぶんしっかりしている。 ",
@@ -9190,7 +9190,7 @@
         "content": "～にしろ/にせよ/にしても",
         "hiragana": "",
         "meaning": "① 表示让步，“即使……”“无论……”。\n② “无论……还是……”。",
-        "usage": "② 動/イ形普通形＋にしろ/にせよ/にしても＋動/イ形普通形＋にしろ/にせよ/にしても\nナ形語幹/名（－である）＋にしろ/にせよ/にしても＋ナ形語幹/名（－である）＋にしろ/にせよ/にしても",
+        "usage": "① 動·イ形普通形 / ナ形語幹·名(-である) + にしろ/にせよ/にしても\n② 動/イ形普通形＋にしろ/にせよ/にしても＋動/イ形普通形＋にしろ/にせよ/にしても\nナ形語幹/名（－である）＋にしろ/にせよ/にしても＋ナ形語幹/名（－である）＋にしろ/にせよ/にしても",
         "example": [
             {
                 "content": "① この計画をこのまま<ruby>進<rt>すす</rt></ruby>めるかやめるかいずれにしても<ruby>早<rt>そう</rt></ruby><ruby>急<rt>きゅう</rt></ruby>に<ruby>結<rt>けつ</rt></ruby><ruby>論<rt>ろん</rt></ruby>を出す必要があるだろう。 ",
@@ -9234,7 +9234,7 @@
         "content": "～に過ぎない",
         "hiragana": "～にすぎない",
         "meaning": "“只不过……而已”。",
-        "usage": "",
+        "usage": "動·イ形普通形 / ナ形語幹-である / 名(-である) + に過ぎない",
         "example": [
             {
                 "content": "①<ruby>北<rt>きた</rt></ruby><ruby>川<rt>がわ</rt></ruby><ruby>市<rt>し</rt></ruby>は、かつては<ruby>人<rt>じん</rt></ruby><ruby>口<rt>こう</rt></ruby>5千人の小さな村にすぎなかった が、今では人口50万人の大都市だ。 ",
@@ -9263,7 +9263,7 @@
         "content": "～に相違ない",
         "hiragana": "～にそういない",
         "meaning": "表示断定，“一定……”“肯定……”。",
-        "usage": "",
+        "usage": "動·イ形普通形 / ナ形語幹 / 名 + に相違ない",
         "example": [
             {
                 "content": "①<ruby>服<rt>ふく</rt></ruby><ruby>装<rt>そう</rt></ruby>はいつもとだいぶ違うが、やっぱりあれは<ruby>田<rt>た</rt></ruby><ruby>中<rt>なか</rt></ruby>さんに相違ない 。 ",
@@ -9321,7 +9321,7 @@
         "content": "～に違いない",
         "hiragana": "～にちがいない",
         "meaning": "表示断定，“一定……”“肯定……”。",
-        "usage": "",
+        "usage": "動·イ形普通形 / ナ形語幹 / 名 + に違いない",
         "example": [
             {
                 "content": "①<ruby>合<rt>ごう</rt></ruby><ruby>計<rt>けい</rt></ruby>がこんなに大きい数字になるなんて、だれかが<ruby>計<rt>けい</rt></ruby><ruby>算<rt>さん</rt></ruby>を間違えたに違いない 。 ",
@@ -9525,7 +9525,7 @@
         "content": "～にもかかわらず",
         "hiragana": "",
         "meaning": "表示转折，“虽然……但是……”“尽管……却……”。",
-        "usage": "",
+        "usage": "動·イ形普通形 / ナ形語幹·名(-である) + にもかかわらず",
         "example": [
             {
                 "content": "①<ruby>駅<rt>えき</rt></ruby><ruby>前<rt>まえ</rt></ruby>に新しくできたラーメン屋はいつも込んでいる。昨日も<ruby>大<rt>おお</rt></ruby><ruby>雨<rt>あめ</rt></ruby>にもかかわらず<ruby>行<rt>ぎょう</rt></ruby><ruby>列<rt>れつ</rt></ruby>ができていた。 ",
@@ -9699,7 +9699,7 @@
         "content": "～のみならず",
         "hiragana": "",
         "meaning": "“不仅……，（而且……）”。",
-        "usage": "",
+        "usage": "動·イ形普通形 / ナ形語幹·名(-である) + のみならず",
         "example": [
             {
                 "content": "①<ruby>担<rt>たん</rt></ruby><ruby>当<rt>とう</rt></ruby><ruby>者<rt>しゃ</rt></ruby>のみならず 、会社<ruby>全<rt>ぜん</rt></ruby><ruby>体<rt>たい</rt></ruby>で<ruby>不<rt>ふ</rt></ruby><ruby>正<rt>せい</rt></ruby>な<ruby>売<rt>ばい</rt></ruby><ruby>買<rt>ばい</rt></ruby>を行っていた。 ",
@@ -9767,7 +9767,7 @@
         "content": "～ばかりか",
         "hiragana": "",
         "meaning": "表示递进，“不但……”“不只是……”。",
-        "usage": "",
+        "usage": "動·イ形·ナ形の名詞修飾形 / 名 + ばかりか",
         "example": [
             {
                 "content": "① 彼は、銀行からの<ruby>借<rt>しゃっ</rt></ruby><ruby>金<rt>きん</rt></ruby>が数百万円もあって、返せずにいるという。そればかりか<ruby>友<rt>ゆう</rt></ruby><ruby>人<rt>じん</rt></ruby>たちからも<ruby>相<rt>そう</rt></ruby><ruby>当<rt>とう</rt></ruby>のお金を借りているらしい。 ",
@@ -9796,7 +9796,7 @@
         "content": "～ばかりに",
         "hiragana": "",
         "meaning": "表示不好的原因，“就是因为……”“正因为……”。",
-        "usage": "",
+        "usage": "動·イ形·ナ形の名詞修飾形 / 名-な·である + ばかりに",
         "example": [
             {
                 "content": "① みんなの前でパソコンが得意だなんて話すんじゃなかった。よけいなことを言ったばかりに クラス会の<ruby>案<rt>あん</rt></ruby><ruby>内<rt>ない</rt></ruby><ruby>状<rt>じょう</rt></ruby><ruby>作<rt>づく</rt></ruby>りを頼まれてしまった。 ",
@@ -9854,7 +9854,7 @@
         "content": "～は別として",
         "hiragana": "～はべつとして",
         "meaning": "“……另当别论”“……暂且不论”。",
-        "usage": "",
+        "usage": "動·イ形·ナ形·名の普通形-かどうか·か / 名 + は別として",
         "example": [
             {
                 "content": "① ほかの<ruby>科<rt>か</rt></ruby><ruby>目<rt>もく</rt></ruby>は別として 、数学はとても得意だ。 ",
@@ -9912,7 +9912,7 @@
         "content": "～反面/半面",
         "hiragana": "～はんめん/半面",
         "meaning": "“另一方面……”。",
-        "usage": "",
+        "usage": "動·イ形·ナ形の名詞修飾形 / ナ形語幹·名-である + 反面/半面",
         "example": [
             {
                 "content": "①<ruby>現<rt>げん</rt></ruby><ruby>代<rt>だい</rt></ruby>の<ruby>若<rt>わか</rt></ruby><ruby>者<rt>もの</rt></ruby>は、子どもの時からテレビやインターネットなどでさまざまな<ruby>情<rt>じょう</rt></ruby><ruby>報<rt>ほう</rt></ruby>に<ruby>接<rt>せっ</rt></ruby>する<ruby>機<rt>き</rt></ruby><ruby>会<rt>かい</rt></ruby>が多い。その反面 、<ruby>実<rt>じつ</rt></ruby><ruby>物<rt>ぶつ</rt></ruby>を見たりさわったりする<ruby>体<rt>たい</rt></ruby><ruby>験<rt>けん</rt></ruby>が<ruby>不<rt>ふ</rt></ruby><ruby>足<rt>そく</rt></ruby>している。 ",
@@ -10087,7 +10087,7 @@
         "content": "～も当然だ",
         "hiragana": "～もとうぜんだ",
         "meaning": "“……也是理所当然的”。",
-        "usage": "",
+        "usage": "動·イ形·ナ形の名詞修飾形-の / 名 + も当然だ",
         "example": [
             {
                 "content": "① 3週間も水をやらなかったのだから、花が<ruby>枯<rt>か</rt></ruby>れてしまうのも当然だ 。 ",
@@ -10198,7 +10198,7 @@
         "content": "～ものだから",
         "hiragana": "",
         "meaning": "表示原因，“因为……”。",
-        "usage": "",
+        "usage": "動·イ形·ナ形の名詞修飾形 / 名-な + ものだから",
         "example": [
             {
                 "content": "① 娘があまりに楽しみにしていたものだから 、<ruby>遊<rt>ゆう</rt></ruby><ruby>園<rt>えん</rt></ruby><ruby>地<rt>ち</rt></ruby>に行けなくなったことをすぐには言い出せなかった。 ",
@@ -10300,7 +10300,7 @@
         "content": "～ものの",
         "hiragana": "",
         "meaning": "表示转折，“虽然……但是……”。",
-        "usage": "",
+        "usage": "動·イ形·ナ形の名詞修飾形 / 名-である + ものの",
         "example": [
             {
                 "content": "① あの映画は一度見たものの 、話の<ruby>筋<rt>すじ</rt></ruby>がまったくわからなかった。 ",
@@ -10382,7 +10382,7 @@
         "content": "～ようで",
         "hiragana": "",
         "meaning": "“看上去好像……，但……”。",
-        "usage": "",
+        "usage": "動·イ形普通形 / ナ形語幹-な / 名-の + ようで",
         "example": [
             {
                 "content": "① 彼は<ruby>冷<rt>れい</rt></ruby><ruby>静<rt>せい</rt></ruby>なようで 、本当はあわてものなんです。 ",
@@ -10440,7 +10440,7 @@
         "content": "～ようなら（ば）/ようだったら/ようであれば",
         "hiragana": "",
         "meaning": "表示假定，“如果……”。",
-        "usage": "",
+        "usage": "動·イ形辞書形・ない形-ない / ナ形語幹-な + ようなら (ば)/ ようだったら/ようであれば",
         "example": [
             {
                 "content": "① （ホームページで）\nQ：ゲームをしていたら、急に<ruby>画<rt>が</rt></ruby><ruby>面<rt>めん</rt></ruby>が暗くなってしまいました。どうしたらいいでか。\nA：一度<ruby>電<rt>でん</rt></ruby><ruby>源<rt>げん</rt></ruby>を切り、1分くらい<ruby>経<rt>た</rt></ruby>ってからまたつけてみてください。ただし、同じことが何度も<ruby>繰<rt>く</rt></ruby>り<ruby>返<rt>かえ</rt></ruby>されるようならば<ruby>故<rt>こ</rt></ruby><ruby>障<rt>しょう</rt></ruby>です。<ruby>修<rt>しゅう</rt></ruby><ruby>理<rt>り</rt></ruby>を<ruby>依<rt>い</rt></ruby><ruby>頼<rt>らい</rt></ruby>してください。 ",
@@ -10716,7 +10716,7 @@
         "content": "お/ご～いただけませんか",
         "hiragana": "",
         "meaning": "敬語\n“能否请您……”，表示礼貌地请求对方为自己一方做某事。",
-        "usage": "",
+        "usage": "お + 動1、動2ます形 + いただけませんか\nご + 動3語幹 + いただけませんか",
         "example": [
             {
                 "content": "①<ruby>少<rt>しょう</rt></ruby>々 しょう お 待ちいただけませんか 。 ",
@@ -10745,7 +10745,7 @@
         "content": "お/ご～願えませんか",
         "hiragana": "お/ご～ねがえませんか",
         "meaning": "礼貌地请求对方做某事。",
-        "usage": "",
+        "usage": "お + 動1、動2ます形 + 願えませんか\nご + 動3語幹 + 願えませんか",
         "example": [
             {
                 "content": "① お忙しいところ<ruby>申<rt>もう</rt></ruby>し<ruby>訳<rt>わけ</rt></ruby>ありませんが、何とかお 引き受け願えませんでしょうか 。 ",
@@ -10774,7 +10774,7 @@
         "content": "お/ご～申う し上げる",
         "hiragana": "お/ご～もう しあげる",
         "meaning": "比「お/ご～する/いたす」 更谦恭的表达方式。",
-        "usage": "",
+        "usage": "お + 動1、動2ます形 + 申し上げる\nご + 動3語幹 + 申し上げる",
         "example": [
             {
                 "content": "① 「このたびは、<ruby>私<rt>わたくし</rt></ruby>どもの<ruby>商<rt>しょう</rt></ruby><ruby>品<rt>ひん</rt></ruby><ruby>発<rt>はっ</rt></ruby><ruby>送<rt>そう</rt></ruby>ミスにより、お客様に大変ご迷惑をおかけしましたことを深くお<ruby>詫<rt>わ</rt></ruby>び申し上げます 。申し訳ございませんでした。」 ",
