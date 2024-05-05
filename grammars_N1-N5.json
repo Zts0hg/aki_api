@@ -3055,7 +3055,7 @@
         "content": "～ないではない/ないでもない",
         "hiragana": "",
         "meaning": "表示前项所提及的事情也是有可能的，但是往往很难实现。“并不是不……”“并非是……”“不是不……”。",
-        "usage": "動ない形 / イ形-く / ナ形-で / 名+も/が + ないではない/ないでもない",
+        "usage": "動ない形 / イ形-く / ナ形-で / 名-も·が + ないではない/ないでもない",
         "example": [
             {
                 "content": "① 彼の論文は、<ruby>構<rt>こう</rt></ruby><ruby>成<rt>せい</rt></ruby>にはまだ少し問題がある気がしないでもない が、内容<ruby>自<rt>じ</rt></ruby><ruby>体<rt>たい</rt></ruby>はだいぶよくなったと思う。 ",
@@ -3234,7 +3234,7 @@
         "content": "～なくはない/なくもない",
         "hiragana": "",
         "meaning": "表示前项的事情也是有可能的或者前项的动作行为也是成立的。“也有可能……”“也不是不……”。",
-        "usage": "動ない形 / イ形-く / ナ形-で / 名+も/が + なくはない/なくもない",
+        "usage": "動ない形 / イ形-く / ナ形-で / 名+も·が + なくはない/なくもない",
         "example": [
             {
                 "content": "① 子供「自分のパソコンが欲しいよ。ねえ、駄目？」\n母親「ゲームじゃなくて勉強に使うんなら、考えなくもない けど。」 ",
@@ -15223,7 +15223,7 @@
         "content": "～そうだ",
         "hiragana": "",
         "meaning": "① “听说……”“据说……”。是传闻助动词。\n② “好像……”“似乎……”“眼看就要……”。是样态助动词。",
-        "usage": "① 句子普通形＋そうだ",
+        "usage": "① 句子普通形＋そうだ\n② 动词「ます形」 / い形容詞词干 / な形容詞词干 + そうだ",
         "example": [
             {
                 "content": "①<ruby>来<rt>らい</rt></ruby><ruby>週<rt>しゅう</rt></ruby>うちの<ruby>近<rt>ちか</rt></ruby>くでお<ruby>祭<rt>まつ</rt></ruby>りがあるそうです 。 ",
@@ -15267,7 +15267,7 @@
         "content": "～ようだ",
         "hiragana": "",
         "meaning": "① “像……一样”“宛如……”。表示比喻。\n② “像……那样”。表示举例、列举。\n③ “好像……”“似乎……”。表示主观推测，带有不确定的语气。",
-        "usage": "",
+        "usage": "动词普通形 / い形容詞普通形 / な形容詞词干-な / 名词-の + ようだ",
         "example": [
             {
                 "content": "①<ruby>母<rt>はは</rt></ruby>ははじめて<ruby>飛<rt>ひ</rt></ruby><ruby>行<rt>こう</rt></ruby><ruby>機<rt>き</rt></ruby>に<ruby>乗<rt>の</rt></ruby>って、<ruby>子<rt>こ</rt></ruby>どものように<ruby>喜<rt>よろこ</rt></ruby>んだ。 ",
@@ -15311,7 +15311,7 @@
         "content": "～らしい",
         "hiragana": "",
         "meaning": "① “好像……”。表示根据各种客观情况、传闻做出可能性很高的推测、判断。\n② “像……似的”“地道的……”。「らしい」 属于い 形容词活用，接在名词后面，表示主体充分具备了「～らしい」 前面的名词应该具有的特点、性质、风格等。",
-        "usage": "② 名词＋らしい",
+        "usage": "动词普通形 / い形容詞普通形 / な形容詞词干 / 名词 + らしい\n② 名词＋らしい",
         "example": [
             {
                 "content": "① 二<ruby>人<rt>ふたり</rt></ruby>は<ruby>来<rt>らい</rt></ruby><ruby>年<rt>ねん</rt></ruby><ruby>結<rt>けっ</rt></ruby><ruby>婚<rt>こん</rt></ruby>するらしい です。 ",
@@ -15355,7 +15355,7 @@
         "content": "～みたいだ",
         "hiragana": "",
         "meaning": "① “好像……”“似乎……”。表示说话人通过分析自己所感知的信息做出的主观判断，多用于口语。\n② “像……一样”“宛如……”。表示比喻，经常和副词「まるで」 等搭配使用。其活用形式与な形容词相同，主要用于口语。\n③ “像……那样”，表示列举。",
-        "usage": "",
+        "usage": "动词普通形 / い形容詞普通形 / な形容詞词干 / 名词 + みたいだ",
         "example": [
             {
                 "content": "①<ruby>誰<rt>だれ</rt></ruby>か<ruby>教<rt>きょう</rt></ruby><ruby>室<rt>しつ</rt></ruby>にいるみたいだ 。<ruby>電<rt>でん</rt></ruby><ruby>気<rt>き</rt></ruby>が<ruby>付<rt>つ</rt></ruby>いている。 ",
@@ -15738,7 +15738,7 @@
         "content": "～もの",
         "hiragana": "",
         "meaning": "指代句中已经出现或者即将要提及的具体事物。",
-        "usage": "",
+        "usage": "动词普通形 / い形容詞普通形 / な形容詞词干-な / 名词-の + もの",
         "example": [
             {
                 "content": "① メニューの<ruby>中<rt>なか</rt></ruby>からどれでも<ruby>好<rt>す</rt></ruby>きなもの を<ruby>一<rt>ひと</rt></ruby>つ<ruby>選<rt>えら</rt></ruby>んでください。 ",
@@ -15762,7 +15762,7 @@
         "content": "～こと",
         "hiragana": "",
         "meaning": "形式体言，其作为实质名词的意义已经相对薄弱，故在句中通常不翻译出来。",
-        "usage": "",
+        "usage": "动词普通形 / い形容詞普通形 / な形容詞词干-な / 名词-の + こと",
         "example": [
             {
                 "content": "①<ruby>銀<rt>ぎん</rt></ruby><ruby>行<rt>こう</rt></ruby>の<ruby>名<rt>な</rt></ruby><ruby>前<rt>まえ</rt></ruby>が<ruby>変<rt>か</rt></ruby>わったこと を<ruby>知<rt>し</rt></ruby>りませんでした。 ",
@@ -15825,7 +15825,7 @@
         "content": "～の/んです",
         "hiragana": "",
         "meaning": "“（原因）是……”，表示说明、强调。「～のだ」 用于解释说明前项事实、情况发生的原因、理由。用在疑问句中表示说话人要求对方做出某些说明。「～のだ」 是书面语，「～んだ」 是口语。",
-        "usage": "",
+        "usage": "动词普通形 / い形容詞普通形 / な形容詞词干-な / 名词-な + の/んです",
         "example": [
             {
                 "content": "① A「 明<ruby>日<rt>あした</rt></ruby>、<ruby>一<rt>いっ</rt></ruby><ruby>緒<rt>しょ</rt></ruby>に<ruby>出<rt>で</rt></ruby>かけませんか。」\nB「 明<ruby>日<rt>あした</rt></ruby>は<ruby>友<rt>とも</rt></ruby>だちがうちに<ruby>来<rt>く</rt></ruby>る<ruby>予<rt>よ</rt></ruby><ruby>定<rt>てい</rt></ruby>なんです 。」 ",
@@ -15849,7 +15849,7 @@
         "content": "～のに",
         "hiragana": "",
         "meaning": "“却……”。表示转折。",
-        "usage": "",
+        "usage": "动词普通形 / い形容詞普通形 / な形容詞词干-な / 名词-な + のに",
         "example": [
             {
                 "content": "① A「<ruby>何<rt>なん</rt></ruby><ruby>回<rt>かい</rt></ruby>も<ruby>電<rt>でん</rt></ruby><ruby>話<rt>わ</rt></ruby>したのに 、どうして<ruby>出<rt>で</rt></ruby>てくれなかったんですか。」\n  B「すみません。」 ",
@@ -15897,7 +15897,7 @@
         "content": "～てもかまわない",
         "hiragana": "",
         "meaning": "“……也行”“……也可以”。表示“不妨碍，无伤大雅”等意思。",
-        "usage": "",
+        "usage": "动词「て形」 / い形容词「て形」 / な形容词词干-で / 名词-で + もかまわない",
         "example": [
             {
                 "content": "①<ruby>遅<rt>おそ</rt></ruby>くてもかまわない ので<ruby>電<rt>でん</rt></ruby><ruby>話<rt>わ</rt></ruby>してください。 ",
@@ -15945,7 +15945,7 @@
         "content": "～なければならない/なければいけない",
         "hiragana": "",
         "meaning": "“必须……”“不……是不行的”。表示从社会常识或事情本身性质来看，有某种义务或必要性。",
-        "usage": "",
+        "usage": "动词「ない形」去掉ない / い形容詞词干-く / な形容詞词干-で / 名詞-で + なければならない/なければいけない",
         "example": [
             {
                 "content": "①<ruby>食<rt>しょく</rt></ruby><ruby>事<rt>じ</rt></ruby>の<ruby>前<rt>まえ</rt></ruby>には<ruby>必<rt>かなら</rt></ruby>ず<ruby>手<rt>て</rt></ruby>を<ruby>洗<rt>あら</rt></ruby>わなければなりません 。 ",
@@ -15969,7 +15969,7 @@
         "content": "～なくてもいい",
         "hiragana": "",
         "meaning": "“不……也行”。",
-        "usage": "",
+        "usage": "动词「ない形」去掉ない / い形容詞词干-く / な形容詞词干-で / 名詞-で + なくてもいい",
         "example": [
             {
                 "content": "①<ruby>電<rt>でん</rt></ruby><ruby>話<rt>わ</rt></ruby>をかけなくてもいい です。 ",
@@ -15993,7 +15993,7 @@
         "content": "～なくてはならない/なくてはいけない",
         "hiragana": "",
         "meaning": "“必须……”。",
-        "usage": "",
+        "usage": "动词「ない形」去掉ない / い形容詞词干-く / な形容詞词干-で / 名詞-で + なくてはならない/なくてはいけない",
         "example": [
             {
                 "content": "①<ruby>寝<rt>ね</rt></ruby>る<ruby>前<rt>まえ</rt></ruby>に<ruby>必<rt>かなら</rt></ruby>ず<ruby>歯<rt>は</rt></ruby>を<ruby>磨<rt>みが</rt></ruby>かなくてはいけません 。 ",
@@ -16017,7 +16017,7 @@
         "content": "～すぎる",
         "hiragana": "",
         "meaning": "“过于……”。表示某种行为或状态过度。",
-        "usage": "",
+        "usage": "动词「ます形」 / い形容詞词干 / な形容詞词干 + すぎる",
         "example": [
             {
                 "content": "① この<ruby>花<rt>はな</rt></ruby>は、<ruby>土<rt>つち</rt></ruby>が<ruby>乾<rt>かわ</rt></ruby>いたら<ruby>水<rt>みず</rt></ruby>をやる<ruby>必<rt>ひつ</rt></ruby><ruby>要<rt>よう</rt></ruby>があるが、やりすぎる のもよくない。<ruby>水<rt>みず</rt></ruby>が<ruby>多<rt>おお</rt></ruby>いと<ruby>根<rt>ね</rt></ruby>が<ruby>腐<rt>くさ</rt></ruby>ってしまう。」 ",
@@ -16190,7 +16190,7 @@
         "content": "～うちに/ないうちに",
         "hiragana": "",
         "meaning": "① “在……之内”“趁着……的时候”。\n② “趁不……”“趁没……”。表示趁着前项的动作或现象还没有发生，赶快做后项的事情。",
-        "usage": "② 动词「ない形」 ＋うちに",
+        "usage": "① 动词普通形 / い形容詞辞书形 / な形容詞词干-な / 名詞-の + うちに\n② 动词「ない形」 ＋うちに",
         "example": [
             {
                 "content": "① どうぞ、<ruby>温<rt>あたた</rt></ruby>かいうちに お<ruby>召<rt>め</rt></ruby>し<ruby>上<rt>あ</rt></ruby>がりください。 ",
@@ -16643,7 +16643,7 @@
         "content": "～まま",
         "hiragana": "",
         "meaning": "“就那样……”“维持……的原样”。",
-        "usage": "",
+        "usage": "动词「た形」 / 动词「ない形」 / い形容詞辞书形 / な形容詞词干-な / 名詞-の + まま",
         "example": [
             {
                 "content": "① テレビをつけたまま<ruby>寝<rt>ね</rt></ruby>てしまいました。 ",
@@ -16715,7 +16715,7 @@
         "content": "～かもしれない",
         "hiragana": "",
         "meaning": "“也许……”“可能……”。",
-        "usage": "",
+        "usage": "动词普通形 / い形容詞普通形 / な形容詞词干 / 名詞 + かもしれない",
         "example": [
             {
                 "content": "① スーパーに、トマトのジャムという<ruby>珍<rt>めずら</rt></ruby>しいものがあった。ジャムだったら<ruby>甘<rt>あま</rt></ruby>いから、トマトのすっぱさが<ruby>苦<rt>にが</rt></ruby><ruby>手<rt>て</rt></ruby>な<ruby>私<rt>わたし</rt></ruby>にも<ruby>食<rt>た</rt></ruby>べられるかもしれない と<ruby>思<rt>おも</rt></ruby>って、<ruby>買<rt>か</rt></ruby>ってみた。 ",
@@ -16792,7 +16792,7 @@
         "content": "～はずだ/はずがない",
         "hiragana": "",
         "meaning": "① “理应……”“应该……”。表示说话人根据事物的一般常理或发展趋势进行推断、预测。\n② “不可能……”“不会……”。表示说话人根据某种情理或经验，推断完全没有出现某种情况的可能性。",
-        "usage": "",
+        "usage": "① 动词普通形 / い形容詞普通形 / な形容詞詞干-な / 名詞-の + はずだ\n② 动词普通形 / い形容詞普通形 / な形容詞词干-な / 名詞-の + はずがない",
         "example": [
             {
                 "content": "① （<ruby>会<rt>かい</rt></ruby><ruby>社<rt>しゃ</rt></ruby>で）<ruby>内<rt>うち</rt></ruby><ruby>田<rt>だ</rt></ruby>「<ruby>高<rt>たか</rt></ruby><ruby>田<rt>だ</rt></ruby>さんがしている<ruby>指<rt>ゆび</rt></ruby><ruby>輪<rt>わ</rt></ruby>、すごく<ruby>高<rt>たか</rt></ruby>そうだよね。」<ruby>森<rt>もり</rt></ruby><ruby>山<rt>やま</rt></ruby>「いや、<ruby>高<rt>たか</rt></ruby>い<ruby>指<rt>ゆび</rt></ruby><ruby>輪<rt>わ</rt></ruby>だったら、<ruby>会<rt>かい</rt></ruby><ruby>社<rt>しゃ</rt></ruby>にしてこないはずだ よ。」 ",
@@ -16826,7 +16826,7 @@
         "content": "～たら",
         "hiragana": "",
         "meaning": "① “如果……的话”，表示假定条件。经常和助词「もし」 （假如）搭配使用。\n② “……之后”。表示前项事情发生后，就去做后项动作。\n③ “……一看”，表示后项事态的发生出乎意料或表示意外发现。",
-        "usage": "",
+        "usage": "动词「た形」 / い形容詞词干-かった / な形容詞词干 / 名詞-だった + ら",
         "example": [
             {
                 "content": "① もしわからないことがあったら 、<ruby>参<rt>さん</rt></ruby><ruby>考<rt>こう</rt></ruby><ruby>書<rt>しょ</rt></ruby>、インターネットなど<ruby>何<rt>なに</rt></ruby>を<ruby>使<rt>つか</rt></ruby>ってもいいですから、<ruby>調<rt>しら</rt></ruby>べておいてください。 ",
@@ -16870,7 +16870,7 @@
         "content": "～なら",
         "hiragana": "",
         "meaning": "① “如果……的话”。表示假定条件，后项一般是说话人的判断或决定。\n② “……的话”。表示提起话题，主要是针对对方提出的话题或问题做出回答，或者是向对方提出自己的意见、建议等。",
-        "usage": "",
+        "usage": "动词普通形(-の/ん) / い形容詞普通形 (-の/ん) / な形容詞词干 / 名詞 + なら",
         "example": [
             {
                 "content": "①<ruby>子<rt>こ</rt></ruby>ども「<ruby>何<rt>なに</rt></ruby>か<ruby>食<rt>た</rt></ruby>べるもの、ある？」<ruby>母<rt>はは</rt></ruby><ruby>親<rt>おや</rt></ruby>「おなかがすいているなら ドーナツがあるよ。」 ",
@@ -16938,7 +16938,7 @@
         "content": "～と",
         "hiragana": "",
         "meaning": "① “一……就……”，表示必然的恒定条件或习惯。\n② “如果……的话……”，表示假定条件 。如果具备了前项的条件，可能就会产生后项的结果。\n③ “刚一……就……”。表示刚做前项，就发生了后项，后项事情是自然而然的状态或结果。\n④ “一……立即……”，表示同一主体相继进行的两项动作。",
-        "usage": "",
+        "usage": "动词辞书形 / い形容詞辞书形 / な形容詞词干-だ / 名詞-だ + と",
         "example": [
             {
                 "content": "①<ruby>仕<rt>し</rt></ruby><ruby>事<rt>ごと</rt></ruby>から<ruby>帰<rt>かえ</rt></ruby>って、<ruby>娘<rt>むすめ</rt></ruby>に<ruby>笑<rt>え</rt></ruby><ruby>顔<rt>がお</rt></ruby>で「おかえり。」 と<ruby>言<rt>い</rt></ruby>われると こんなかわいい<ruby>娘<rt>むすめ</rt></ruby>がいるわたしは<ruby>本<rt>ほん</rt></ruby><ruby>当<rt>とう</rt></ruby>に<ruby>幸<rt>しあわ</rt></ruby>せだといつも<ruby>思<rt>おも</rt></ruby>う。 ",
@@ -17016,7 +17016,7 @@
         "content": "もし～ても",
         "hiragana": "",
         "meaning": "“就算……”。",
-        "usage": "",
+        "usage": "もし + 动词「て形」 / い形容詞词干-くて / な形容詞词干-で / 名詞-で + も",
         "example": [
             {
                 "content": "①<ruby>加<rt>か</rt></ruby><ruby>藤<rt>とう</rt></ruby>「 明<ruby>日<rt>あした</rt></ruby>はサッカーの<ruby>試<rt>し</rt></ruby><ruby>合<rt>あい</rt></ruby>です。もし<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>っても<ruby>試<rt>し</rt></ruby><ruby>合<rt>あい</rt></ruby>をします。<ruby>頑<rt>がん</rt></ruby><ruby>張<rt>ば</rt></ruby>ってください。」\nみんな「はい、<ruby>頑<rt>がん</rt></ruby><ruby>張<rt>ば</rt></ruby>ります。」 ",
@@ -17040,7 +17040,7 @@
         "content": "～といい",
         "hiragana": "",
         "meaning": "“……的话就好了”。表示愿望。",
-        "usage": "",
+        "usage": "动词辞书形 / い形容詞辞书形 / な形容詞词干-だ / 名詞-だ + といい",
         "example": [
             {
                 "content": "①<ruby>病<rt>びょう</rt></ruby><ruby>気<rt>き</rt></ruby>が<ruby>早<rt>はや</rt></ruby>くよくなるといい ですね。 ",
@@ -17064,7 +17064,7 @@
         "content": "～ため（に）",
         "hiragana": "",
         "meaning": "① “由于……”“因为……”。表示客观原因。\n② “为了……”。",
-        "usage": "② 名词＋の/动词辞书形＋ために",
+        "usage": "① 动词普通形 / い形容詞普通形 / な形容詞普通形 / 名詞-の + ため(に)\n② 名词＋の/动词辞书形＋ために",
         "example": [
             {
                 "content": "①<ruby>携<rt>けい</rt></ruby><ruby>帯<rt>たい</rt></ruby><ruby>電<rt>でん</rt></ruby><ruby>話<rt>わ</rt></ruby>を<ruby>忘<rt>わす</rt></ruby>れたために 、<ruby>連<rt>れん</rt></ruby><ruby>絡<rt>らく</rt></ruby>できませんでした。 ",
@@ -17218,7 +17218,7 @@
         "content": "～かわりに",
         "hiragana": "",
         "meaning": "① “代替……”。\n② “取代……”。\n③ “不……而……”。\n④ “……同时，（条件是）……”。\n⑤ 表示转折，“虽然……但是……”。",
-        "usage": "",
+        "usage": "动词普通形 / い形容詞辞书形 / な形容詞词干-な / 名詞-の + かわりに",
         "example": [
             {
                 "content": "①<ruby>社<rt>しゃ</rt></ruby><ruby>長<rt>ちょう</rt></ruby>のかわりに 、<ruby>副<rt>ふく</rt></ruby><ruby>社<rt>しゃ</rt></ruby><ruby>長<rt>ちょう</rt></ruby>が<ruby>挨<rt>あい</rt></ruby><ruby>拶<rt>さつ</rt></ruby>をした。 ",
@@ -17359,7 +17359,7 @@
         "content": "～なくて",
         "hiragana": "",
         "meaning": "“不……”“没……”。",
-        "usage": "",
+        "usage": "动词「ない形」去掉ない / い形容詞词干-く / な形容詞词干-で / 名詞-で + なくて",
         "example": [
             {
                 "content": "① あの<ruby>店<rt>みせ</rt></ruby>はあまり<ruby>高<rt>たか</rt></ruby>くなくて 、<ruby>店<rt>てん</rt></ruby><ruby>員<rt>いん</rt></ruby>も<ruby>親<rt>しん</rt></ruby><ruby>切<rt>せつ</rt></ruby>です。 ",
@@ -17460,7 +17460,7 @@
         "content": "～かどうか",
         "hiragana": "",
         "meaning": "“是否……”。表示疑问或难以作出判断。",
-        "usage": "",
+        "usage": "动词普通形 / い形容詞普通形 / な形容詞词干 / 名詞 + かどうか",
         "example": [
             {
                 "content": "①<ruby>中<rt>なか</rt></ruby><ruby>田<rt>だ</rt></ruby>さんが<ruby>大<rt>だい</rt></ruby><ruby>学<rt>がく</rt></ruby>を<ruby>卒<rt>そつ</rt></ruby><ruby>業<rt>ぎょう</rt></ruby>できたかどうか<ruby>知<rt>し</rt></ruby>っていますか。 ",
@@ -21805,7 +21805,7 @@
         "content": "～だろう/でしょう",
         "hiragana": "",
         "meaning": "常和确信程度不高的「たぶん」 「おそらく」 等副词呼应使用，表示说话人的主观推测。和确信程度较高的「 必 かなら ず」 「きっと」 等副词呼应使用，表示说话人较为肯定的判断。",
-        "usage": "",
+        "usage": "动词普通形(-の) / い形容詞普通形 / な形容詞词干 / 名詞 + だろう/でしょう",
         "example": [
             {
                 "content": "①<ruby>田<rt>た</rt></ruby><ruby>中<rt>なか</rt></ruby>さんはたぶん<ruby>歌<rt>うた</rt></ruby>が<ruby>上<rt>じょう</rt></ruby><ruby>手<rt>ず</rt></ruby>でしょう 。 ",
@@ -22043,7 +22043,7 @@
         "content": "～ほうが～",
         "hiragana": "",
         "meaning": "“还是……比较……”。",
-        "usage": "",
+        "usage": "动词普通形 / い形容詞普通形 / な形容詞词干-な /名詞-の + ほうが〜",
         "example": [
             {
                 "content": "① もう<ruby>少<rt>すこ</rt></ruby>し<ruby>待<rt>ま</rt></ruby>ったほうが いいですよ。 ",
@@ -22096,7 +22096,7 @@
         "content": "～とき",
         "hiragana": "",
         "meaning": "“在……的时候”。",
-        "usage": "",
+        "usage": "动词普通形 / い形容詞普通形 / な形容詞詞干-な / 名詞-の + とき",
         "example": [
             {
                 "content": "① わからないとき は、<ruby>先<rt>せん</rt></ruby><ruby>生<rt>せい</rt></ruby>に<ruby>聞<rt>き</rt></ruby>きます。 ",
@@ -22130,7 +22130,7 @@
         "content": "場合",
         "hiragana": "ばあい",
         "meaning": "“在……情况下”，后项大多为采取相应措施或对策的句子。",
-        "usage": "",
+        "usage": "动词普通形 / い形容詞普通形 / な形容詞词干-な / 名詞-の + 場合",
         "example": [
             {
                 "content": "①<ruby>財<rt>さい</rt></ruby><ruby>布<rt>ふ</rt></ruby>が<ruby>盗<rt>ぬす</rt></ruby>まれた<ruby>場<rt>ば</rt></ruby><ruby>合<rt>あい</rt></ruby>、すぐ<ruby>警<rt>けい</rt></ruby><ruby>察<rt>さつ</rt></ruby>を<ruby>呼<rt>よ</rt></ruby>んでください。 ",
