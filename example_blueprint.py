@@ -1,13 +1,15 @@
-import os
-import json
-from flask import Blueprint, jsonify, request, send_file
-import pandas as pd
-from grammar_enumeration import df_grammars
-import text_to_audio
-import platform
-from assistant import Assistant
-import re
 import hashlib
+import json
+import os
+import platform
+import re
+
+import pandas as pd
+from flask import Blueprint, jsonify, request, send_file
+
+import text_to_audio
+from assistant import Assistant
+from grammar_enumeration import df_grammars
 
 RE_WHITESPACES_PATTERN = re.compile(r"\s+")
 
@@ -51,6 +53,8 @@ def index():
             df_res = df_res[df_res.content.str.replace(r"[（）()\s]", "", regex=True).str.contains(item)
                             | df_res.hiragana.str.replace(r"[（）()\s]", "", regex=True).str.contains(item)
                             | df_res.chinese_meaning.str.contains(item) | (df_res.source == item)]
+            df_res["order"] = df_res.content.apply(len)
+            df_res = df_res.sort_values(by="order")
 
     print(f"Search {df_res.shape[0]} records for keyword {keyword}")
     return jsonify({
