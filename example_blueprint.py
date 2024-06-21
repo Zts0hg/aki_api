@@ -60,7 +60,7 @@ def index():
     print(f"Search {df_res.shape[0]} records for keyword {keyword}")
     return jsonify({
         "keyword": keyword,
-        "data": [df.loc[index].to_dict() for index in df_res.index],
+        "data": [df_res.loc[index].to_dict() for index in df_res.index],
     })
 
 
