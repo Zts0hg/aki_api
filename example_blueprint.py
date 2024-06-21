@@ -55,12 +55,11 @@ def index():
                             | df_res.chinese_meaning.str.contains(item) | (df_res.source == item)]
         df_res["order"] = df_res.content.apply(len)
         df_res = df_res.sort_values(by="order")
-        df_res = df_res.reset_index(drop=True)
 
     print(f"Search {df_res.shape[0]} records for keyword {keyword}")
     return jsonify({
         "keyword": keyword,
-        "data": [df_res.loc[index].to_dict() for index in df_res.index],
+        "data": [df.loc[index].to_dict() for index in df_res.index],
     })
 
 
