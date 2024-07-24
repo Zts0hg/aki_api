@@ -52,7 +52,7 @@ def sync_sku():
         )
         for index in df.index:
             detail = df.loc[index].to_dict()
-            no_matched[detail["my_name"]].append((detail[field] for field in target_fields))
+            no_matched[detail["my_name"]].append((str(detail[field]) for field in target_fields))
 
         return jsonify({"running": False, "message": log_content, "no_matched": dict(no_matched)})
 
