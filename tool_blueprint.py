@@ -48,7 +48,7 @@ def sync_sku():
             "stock",
             "item_sku",
             "name",
-            "calcualted_sku",
+            "calculated_sku",
             "error_type",
         )
         for index in df.index:
