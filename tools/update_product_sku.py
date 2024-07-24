@@ -641,7 +641,9 @@ def clear_log_file_content(log_file):
     with open(log_file, "w", encoding="utf-8"):
         pass
 
+
 logger = setup_logger("XMHelper", LOG_FILE, logging.INFO)
+
 
 def start_sync_sku():
     global logger
@@ -651,7 +653,10 @@ def start_sync_sku():
     clear_log_file_content(LOG_FILE)
     print = logger.info
     try:
-        sku_file_path = "C:/Users/32740/Downloads/坤正0717+1500库存SKU.xlsx"
+        sku_file_path = os.path.join(
+            os.path.dirname(os.path.abspath(__file__)), "坤正0717+1500库存SKU.xlsx"
+        )
+
         print(f"Using SKU file: {os.path.basename(sku_file_path)}")
         df_mapping = pd.read_excel(sku_file_path, dtype=str, skiprows=1).fillna("")
         df_mapping = df_mapping.rename(column_name_mapping, axis=1)
@@ -779,10 +784,9 @@ if __name__ == "__main__":
             with open(FLAG_FILE, "w", encoding="utf-8") as fp:
                 pass
 
-
         with open(FLAG_FILE, "r", encoding="utf-8") as fp:
             run_flag = fp.read()
-        
+
         if run_flag != "False":
             time.sleep(3)
             print("Sleeping...")
