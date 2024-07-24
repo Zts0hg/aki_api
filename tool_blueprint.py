@@ -41,7 +41,7 @@ def sync_sku():
             log_content = log.read()
         return jsonify({"running": False, "message": log_content})
 
-    if run_flag == "True":
+    if run_flag == "True" and time.perf_counter() - start_time < 600:
         with open(update_product_sku.LOG_FILE, "r", encoding="utf-8") as log:
             log_content = log.read()
         return jsonify({"running": True, "message": log_content})
