@@ -138,139 +138,8 @@ def get_shoplist():
     )
     return response.json()["data"]["shops"]
 
-
-shops = [
-    {
-        "shop_id": "1134745771",
-        "shop_name": "Kz footwear trade",
-        "platform": 1,
-        "domain": "shopee.ph",
-        "my_name": "坤正SP1",
-        "purview": {"order": 1721750400, "stock": 1727366400},
-    },
-    {
-        "shop_id": "1183263788",
-        "shop_name": "Kzz footwear trade",
-        "platform": 1,
-        "domain": "shopee.ph",
-        "my_name": "坤正SP2",
-        "purview": {"order": 1724083200, "stock": 1727366400},
-    },
-    {
-        "shop_id": "1227353310",
-        "shop_name": "saler.ph",
-        "platform": 1,
-        "domain": "shopee.ph",
-        "my_name": "鸿标SP1",
-        "purview": {"order": 1722873600, "stock": 1721664000},
-    },
-    {
-        "shop_id": "T.7495498999746038527",
-        "shop_name": "PH shoes",
-        "platform": 3,
-        "domain": "seller-ph.tiktok.com",
-        "my_name": "鸿标TK1",
-        "purview": {"tiktokstock": 1722009600},
-    },
-    {
-        "shop_id": "1216068728",
-        "shop_name": "Huiwang shop",
-        "platform": 1,
-        "domain": "shopee.ph",
-        "my_name": "顺进SP1",
-        "purview": {"order": 1723651200, "stock": 1722009600},
-    },
-    {
-        "shop_id": "539665132",
-        "shop_name": "Tina shop_",
-        "platform": 1,
-        "domain": "shopee.ph",
-        "my_name": "鸿标SP2",
-        "purview": {"order": 1723824000, "stock": 1726848000},
-    },
-    {
-        "shop_id": "T.7495690881007913094",
-        "shop_name": "Kzz foot wear trade",
-        "platform": 3,
-        "domain": "seller-ph.tiktok.com",
-        "my_name": "坤正TK1",
-        "purview": {"tiktokorder": 1722355200},
-    },
-    {
-        "shop_id": "PH7SHSGXYA",
-        "shop_name": "Flying Geese",
-        "platform": 2,
-        "domain": "lazada.com.ph",
-        "my_name": "颜望LZ1",
-        "purview": {"lazadaorder": 1722441600, "lazadastock": 1722441600},
-    },
-    {
-        "shop_id": "776481288",
-        "shop_name": "Dany shop",
-        "platform": 1,
-        "domain": "shopee.ph",
-        "my_name": "鸿标SP3",
-        "purview": {"order": 1723824000, "stock": 1722009600},
-    },
-    {
-        "shop_id": "708407062",
-        "shop_name": "MAGICROOM",
-        "platform": 1,
-        "domain": "shopee.ph",
-        "my_name": "鸿标SP4",
-        "purview": {"order": 1723910400, "stock": 1722009600},
-    },
-    {
-        "shop_id": "T.7495771071291951612",
-        "shop_name": "KZ Slipper King",
-        "platform": 3,
-        "domain": "seller-ph.tiktok.com",
-        "my_name": "坤正TK2",
-        "purview": {"tiktokorder": 1724342400},
-    },
-    {
-        "shop_id": "1295219409",
-        "shop_name": "Slipper Supermarket",
-        "platform": 1,
-        "domain": "shopee.ph",
-        "my_name": "鸿标SP5",
-        "purview": {"stock": 1726243200, "order": 1724342400},
-    },
-    {
-        "shop_id": "1308278228",
-        "shop_name": "J&R FASHION SANDALS.SHOP",
-        "platform": 1,
-        "domain": "shopee.ph",
-        "my_name": "鸿标SP6",
-        "purview": {"order": 1722009600, "stock": 1724083200},
-    },
-    {
-        "shop_id": "1308284462",
-        "shop_name": "LANDF Monopoly",
-        "platform": 1,
-        "domain": "shopee.ph",
-        "my_name": "鸿标SP7",
-        "purview": {"order": 1722009600, "stock": 1724083200},
-    },
-    {
-        "shop_id": "T.7495843215427079135",
-        "shop_name": "S&P shoes king",
-        "platform": 3,
-        "domain": "seller-ph.tiktok.com",
-        "my_name": "鸿标TK2",
-        "purview": {"tiktokorder": 1722096000, "tiktokstock": 1724169600},
-    },
-    {
-        "shop_id": "T.7495840944426617781",
-        "shop_name": "Freya shop.",
-        "platform": 3,
-        "domain": "seller-ph.tiktok.com",
-        "my_name": "鸿标TK3",
-        "purview": {"tiktokorder": 1722096000, "tiktokstock": 1724169600},
-    },
-]
-
-shop_id_to_my_name = {shop["shop_id"]: shop["my_name"] for shop in shops}
+shops = get_shoplist()
+shop_id_to_my_name = {shop["shop_id"]: shop["my_name"] or shop["shop_name"] for shop in shops}
 
 column_name_mapping = {
     "PSKU\n相同PSKU判断为同一款商品\nThe same PSKU is judged to be the same product": "PSKU",
@@ -503,16 +372,20 @@ def get_sku(detail, color_mapping, all_stand_sku_set):
         option = option.replace("A8018", "8018")
         option = option.replace("536-1", "536")
         option = option.replace(item_sku, "").strip()
-        if item["name"].casefold() == "size":
+        if item["name"].casefold().startswith("siz"):
             option = option.replace("-", "/")
-        if item["name"].casefold() == "color" and pre_pattern_1.match(option):
+        if item["name"].casefold().startswith("colo") and pre_pattern_1.match(option):
             need_add_item_sku = False
             option = pre_pattern.sub(r"\1-", option)
 
         parts.append(option)
 
+
     if need_add_item_sku:
         parts = [item_sku] + parts
+
+    if parts[-1] == "random":
+        parts[-2], parts[-1] = parts[-1], parts[-2]
 
     parts = [part.strip() for part in parts if part.strip()]
     result_sku = "-".join(parts).replace("--", "-")
@@ -665,7 +538,7 @@ def start_sync_sku():
 
         print("*" * 32)
         for shop in shops:
-            print(f"Fetching {shop['my_name']}({shop['shop_id']})")
+            print(f"Fetching {shop['my_name'] or shop['shop_name']}({shop['shop_id']})")
             shop_id = shop["shop_id"]
             sku_details = update_product_list(shop_id, log=logger.info)
             all_sku_details.extend(sku_details)
@@ -675,7 +548,7 @@ def start_sync_sku():
         with open(f"sku_details_all.json", "w", encoding="utf-8") as fp:
             fp.write(json.dumps(all_sku_details, ensure_ascii=False, indent=4))
 
-        unique_sku = df_mapping.CSKU.unique()
+        unique_sku = [sku.strip() for sku in df_mapping.CSKU.unique()]
 
         print("Generating Unique SKU...")
         all_stand_sku_set = {}
@@ -755,7 +628,7 @@ def start_sync_sku():
         for shop in shops:
             item_id_to_sync = None
             shop_id = shop["shop_id"]
-            print(f"Updating Shop {shop_id} {shop['my_name']}...")
+            print(f"Updating Shop {shop_id} {shop['my_name'] or shop['shop_name']}...")
             json_data = get_shopeeproduct_list(shop_id)
             item_id_to_detail = {
                 item["item_id"]: item for item in json_data["data"]["list"]
@@ -773,15 +646,15 @@ def start_sync_sku():
                     item_id_to_sync = item["item_id"]
 
             if item_id_to_sync:
-                print(f"触发XM后台数据更新, {shop['my_name']}({shop_id}) 【同步中】")
+                print(f"触发XM后台数据更新, {shop['my_name'] or shop['shop_name']}({shop_id}) 【同步中】")
                 sync_result = trigger_xm_sync_stock(shop_id, item_id_to_sync)
                 if sync_result["status"] == 200 and sync_result["message"] == "ok":
                     print(
-                        f"触发XM后台数据更新, {shop['my_name']}({shop_id}) 【同步完成】"
+                        f"触发XM后台数据更新, {shop['my_name'] or shop['shop_name']}({shop_id}) 【同步完成】"
                     )
                 else:
                     print(
-                        f"触发XM后台数据更新, {shop['my_name']}({shop_id}) 【同步失败】{sync_result}"
+                        f"触发XM后台数据更新, {shop['my_name'] or shop['shop_name']}({shop_id}) 【同步失败】{sync_result}"
                     )
 
     except Exception:
@@ -792,17 +665,18 @@ def start_sync_sku():
 
 
 if __name__ == "__main__":
-    while True:
-        if not os.path.exists(FLAG_FILE):
-            with open(FLAG_FILE, "w", encoding="utf-8") as fp:
-                pass
+    # while True:
+    #     if not os.path.exists(FLAG_FILE):
+    #         with open(FLAG_FILE, "w", encoding="utf-8") as fp:
+    #             pass
 
-        with open(FLAG_FILE, "r", encoding="utf-8") as fp:
-            run_flag = fp.read()
+    #     with open(FLAG_FILE, "r", encoding="utf-8") as fp:
+    #         run_flag = fp.read()
 
-        if run_flag != "False":
-            time.sleep(3)
-            print("Sleeping...")
-            continue
+    #     if run_flag != "False":
+    #         time.sleep(3)
+    #         print("Sleeping...")
+    #         continue
 
-        start_sync_sku()
+    #     start_sync_sku()
+    start_sync_sku()
