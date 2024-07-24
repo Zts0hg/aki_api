@@ -652,9 +652,9 @@ def start_sync_sku():
 
     clear_log_file_content(LOG_FILE)
     print = logger.info
+    current_folder = os.path.dirname(os.path.abspath(__file__))
     try:
-        sku_file_path = os.path.join(
-            os.path.dirname(os.path.abspath(__file__)), "坤正0717+1500库存SKU.xlsx"
+        sku_file_path = os.path.join(current_folder, "坤正0717+1500库存SKU.xlsx"
         )
 
         print(f"Using SKU file: {os.path.basename(sku_file_path)}")
@@ -712,7 +712,7 @@ def start_sync_sku():
             detail["my_name"] = shop_id_to_my_name[detail["shop_id"]]
 
         df_res = pd.DataFrame(all_sku_details)
-        df_res.to_csv("C:/Users/32740/Downloads/all_sku_details.csv", index=False)
+        df_res.to_csv(os.path.join(current_folder, "all_sku_details.csv") , index=False)
         print(df_res.columns)
         print(df_res.shape)
         df_res["matched"] = df_res.calcualted_sku.isin(all_stand_sku_set)
@@ -723,7 +723,7 @@ def start_sync_sku():
             by=["my_name", "item_sku", "calcualted_sku"]
         )
         no_matched[["stock", "my_name", "item_sku", "name", "calcualted_sku"]].to_csv(
-            "C:/Users/32740/Downloads/no_matched.csv", index=False
+           os.path.join(current_folder, "no_matched.csv") , index=False
         )
 
         shop_id_to_item_id_to_calcualted_sku = defaultdict(dict)
