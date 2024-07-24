@@ -734,7 +734,7 @@ def start_sync_sku():
             else:
                 no_matched.loc[index, "error_type"] = "其他错误"
 
-        no_matched[["stock", "my_name", "item_sku", "name", "calculated_sku"]].to_csv(
+        no_matched[["stock", "my_name", "item_sku", "name", "calculated_sku", "error_type"]].to_csv(
            os.path.join(current_folder, "no_matched.csv") , index=False
         )
 
