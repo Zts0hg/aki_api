@@ -1,6 +1,7 @@
 import json
 import logging
 import os
+import platform
 import re
 import sys
 import time
@@ -665,18 +666,20 @@ def start_sync_sku():
 
 
 if __name__ == "__main__":
-    # while True:
-    #     if not os.path.exists(FLAG_FILE):
-    #         with open(FLAG_FILE, "w", encoding="utf-8") as fp:
-    #             pass
+    if platform.system().casefold() == "windows":
+        start_sync_sku()
+    else:
+        while True:
+            if not os.path.exists(FLAG_FILE):
+                with open(FLAG_FILE, "w", encoding="utf-8") as fp:
+                    pass
 
-    #     with open(FLAG_FILE, "r", encoding="utf-8") as fp:
-    #         run_flag = fp.read()
+            with open(FLAG_FILE, "r", encoding="utf-8") as fp:
+                run_flag = fp.read()
 
-    #     if run_flag != "False":
-    #         time.sleep(3)
-    #         print("Sleeping...")
-    #         continue
+            if run_flag != "False":
+                time.sleep(3)
+                print("Sleeping...")
+                continue
 
-    #     start_sync_sku()
-    start_sync_sku()
+            start_sync_sku()
