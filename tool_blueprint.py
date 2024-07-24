@@ -42,7 +42,7 @@ def sync_sku():
         with open(update_product_sku.LOG_FILE, "r", encoding="utf-8") as log:
             log_content = log.read()
 
-        df = pd.read_csv("tools/no_matched.csv").fillna("")
+        df = pd.read_csv("tools/no_matched.csv", dtype=str).fillna("")
         no_matched = defaultdict(list)
         target_fields = (
             "stock",
