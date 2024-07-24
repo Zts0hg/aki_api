@@ -49,6 +49,7 @@ def sync_sku():
             "item_sku",
             "name",
             "calcualted_sku",
+            "error_type",
         )
         for index in df.index:
             detail = df.loc[index].to_dict()
