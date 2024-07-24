@@ -1,6 +1,8 @@
 import os
 import time
+from collections import defaultdict
 
+import pandas as pd
 from flask import Blueprint, jsonify
 
 from tools import update_product_sku
@@ -39,7 +41,20 @@ def sync_sku():
             fp.write("")
         with open(update_product_sku.LOG_FILE, "r", encoding="utf-8") as log:
             log_content = log.read()
-        return jsonify({"running": False, "message": log_content})
+
+        df = pd.read_csv("tools/no_matched.csv").fillna("")
+        no_matched = defaultdict(list)
+        target_fields = (
+            "stock",
+            "item_sku",
+            "name",
+            "calcualted_sku",
+        )
+        for index in df.index:
+            detail = df.loc[index].to_dict()
+            no_matched[detail["my_name"]].append((detail[field] for field in target_fields))
+
+        return jsonify({"running": False, "message": log_content, "no_matched": dict(no_matched)})
 
     if run_flag == "True" and time.perf_counter() - start_time < 600:
         with open(update_product_sku.LOG_FILE, "r", encoding="utf-8") as log:

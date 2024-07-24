@@ -296,7 +296,7 @@ column_name_mapping = {
 def update_product_sku(
     shop_id,
     product_id,
-    shop_id_to_item_id_to_calcualted_sku,
+    shop_id_to_item_id_to_calculated_sku,
     item_id_to_detail,
     debug=True,
     log=print,
@@ -327,15 +327,15 @@ def update_product_sku(
         "xm-version": "2.0",
     }
 
-    item_id_to_calcualted_sku = shop_id_to_item_id_to_calcualted_sku[shop_id]
+    item_id_to_calculated_sku = shop_id_to_item_id_to_calculated_sku[shop_id]
     item = item_id_to_detail[product_id]
-    variation_id_to_calcualted_sku = item_id_to_calcualted_sku[product_id]
+    variation_id_to_calculated_sku = item_id_to_calculated_sku[product_id]
     need_update = False
     for sku_detail in item["skus"]:
         variation_id = sku_detail["variation_id"]
         ori_variation_sku = sku_detail["variation_sku"]
-        if variation_id in variation_id_to_calcualted_sku:
-            new_variation_sku = variation_id_to_calcualted_sku[variation_id]
+        if variation_id in variation_id_to_calculated_sku:
+            new_variation_sku = variation_id_to_calculated_sku[variation_id]
         else:
             new_variation_sku = ori_variation_sku
             if debug:
@@ -708,26 +708,39 @@ def start_sync_sku():
             all_sku_details = json.loads(fp.read())
 
         for detail in tqdm(all_sku_details):
-            detail["calcualted_sku"] = get_sku(detail, color_mapping, all_stand_sku_set)
+            detail["calculated_sku"] = get_sku(detail, color_mapping, all_stand_sku_set)
             detail["my_name"] = shop_id_to_my_name[detail["shop_id"]]
 
         df_res = pd.DataFrame(all_sku_details)
+
         df_res.to_csv(os.path.join(current_folder, "all_sku_details.csv") , index=False)
         print(df_res.columns)
         print(df_res.shape)
-        df_res["matched"] = df_res.calcualted_sku.isin(all_stand_sku_set)
+        df_res["matched"] = df_res.calculated_sku.isin(all_stand_sku_set)
         no_matched = df_res[df_res.matched == False]
         print(no_matched.shape)
         no_matched.head()
         no_matched = no_matched.sort_values(
-            by=["my_name", "item_sku", "calcualted_sku"]
+            by=["my_name", "item_sku", "calculated_sku"]
         )
-        no_matched[["stock", "my_name", "item_sku", "name", "calcualted_sku"]].to_csv(
+        for index in no_matched.index:
+            detail = no_matched.loc[index].to_dict()
+            parts = detail["calculated_sku"].split("-")
+            color = parts[1]
+            if color not in color_mapping:
+                no_matched.loc[index, "error_type"] = "颜色错误"
+            elif len(parts) == 3:
+                no_matched.loc[index, "error_type"] = "尺码错误"
+            else:
+                no_matched.loc[index, "error_type"] = "其他错误"
+
+        no_matched[["stock", "my_name", "item_sku", "name", "calculated_sku"]].to_csv(
            os.path.join(current_folder, "no_matched.csv") , index=False
         )
 
-        shop_id_to_item_id_to_calcualted_sku = defaultdict(dict)
-        shop_id_to_item_id_to_calcualted_sku = {
+
+        shop_id_to_item_id_to_calculated_sku = defaultdict(dict)
+        shop_id_to_item_id_to_calculated_sku = {
             shop["shop_id"]: defaultdict(dict) for shop in shops
         }
         for index in df_res.index:
@@ -735,9 +748,9 @@ def start_sync_sku():
             if not detail["matched"]:
                 continue
 
-            shop_id_to_item_id_to_calcualted_sku[detail["shop_id"]][detail["item_id"]][
+            shop_id_to_item_id_to_calculated_sku[detail["shop_id"]][detail["item_id"]][
                 detail["variation_id"]
-            ] = detail["calcualted_sku"]
+            ] = detail["calculated_sku"]
 
         for shop in shops:
             item_id_to_sync = None
@@ -751,7 +764,7 @@ def start_sync_sku():
                 updated = update_product_sku(
                     shop_id,
                     product_id=item["item_id"],
-                    shop_id_to_item_id_to_calcualted_sku=shop_id_to_item_id_to_calcualted_sku,
+                    shop_id_to_item_id_to_calculated_sku=shop_id_to_item_id_to_calculated_sku,
                     item_id_to_detail=item_id_to_detail,
                     debug=False,
                     log=lambda x: tqdm.write(str(x)),
