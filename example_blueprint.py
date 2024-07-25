@@ -87,7 +87,9 @@ def analyze_sentence():
     print(content)
     print(process_method.__name__)
     print(result)
-    print(markdown.markdown(result))
+    print("=" * 32)
+    result = markdown.markdown(result)
+    print(result)
     print("=" * 32)
 
     return jsonify({"data": result})

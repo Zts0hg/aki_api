@@ -57,7 +57,7 @@ class Assistant:
     sentence_analyzing_prompt_template = """
     analyze the following Japanese sentence and using Chinese to explain the used grammar and words:
     requirement 1: you should use Chinese to reply.
-    requirement 2: the reply should be Markdown format
+    requirement 2: the reply should be Markdown content but not a code snippet.
     ---
     {content}
     """
@@ -72,7 +72,7 @@ class Assistant:
     (notice: the lowercase alphabet, such as a, b, c, or digit in the brackets is just a sequence mark of options, not a part of option)
     requirement 1: you should use Chinese to reply.
     requirement 2: you can explain why the option is best or other option is not best from grammar correctness, meaning, context or other aspects.
-    requirement 3: the reply should be Markdown format
+    requirement 3: the reply should be Markdown content but not a code snippet.
     ---
     {content}
     """
