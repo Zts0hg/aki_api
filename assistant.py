@@ -1,3 +1,5 @@
+import os
+
 from langchain import LLMChain, PromptTemplate
 from langchain_openai import AzureChatOpenAI
 
@@ -17,12 +19,11 @@ from langchain_openai import AzureChatOpenAI
 # openai.api_version = openai_config["openai_api_version"]
 # openai.api_key = openai_config["openai_api_key"]
 # print(openai_config)
-
-
 class Assistant:
     llm = AzureChatOpenAI(
+        azure_endpoint="https://shibainu.openai.azure.com/",
+        api_key=os.environ.get("AKI_API_OPENAI_API_KEY"),
         azure_deployment="gpt-4o",
-        azure_endpoint="https://ai-test-for-aki.openai.azure.com/",
         api_version="2024-02-15-preview",
         temperature=0,
         max_tokens=None,
