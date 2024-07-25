@@ -2,6 +2,7 @@ azure-cognitiveservices-speech==1.36.0
 Flask==3.0.2
 Flask-Cors==4.0.1
 gunicorn==21.2.0
+Markdown==3.6
 pandas==2.1.2
 redo==2.0.4
 tqdm==4.66.1

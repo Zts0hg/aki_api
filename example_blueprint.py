@@ -4,6 +4,7 @@ import os
 import platform
 import re
 
+import markdown
 import pandas as pd
 from flask import Blueprint, jsonify, request, send_file
 
@@ -86,6 +87,7 @@ def analyze_sentence():
     print(content)
     print(process_method.__name__)
     print(result)
+    print(markdown.markdown(result))
     print("=" * 32)
 
     return jsonify({"data": result})
