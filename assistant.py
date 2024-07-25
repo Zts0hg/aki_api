@@ -22,6 +22,7 @@ from langchain_openai import AzureChatOpenAI
 class Assistant:
     llm = AzureChatOpenAI(
         azure_deployment="gpt-4o",
+        azure_endpoint="https://ai-test-for-aki.openai.azure.com/",
         api_version="2024-02-15-preview",
         temperature=0,
         max_tokens=None,
