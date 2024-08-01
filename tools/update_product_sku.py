@@ -528,7 +528,7 @@ def start_sync_sku():
     print = logger.info
     current_folder = os.path.dirname(os.path.abspath(__file__))
     try:
-        sku_file_path = os.path.join(current_folder, "坤正0717+1500库存SKU.xlsx"
+        sku_file_path = os.path.join(current_folder, "坤正0731+1500库存SKU.xlsx"
         )
 
         print(f"Using SKU file: {os.path.basename(sku_file_path)}")
