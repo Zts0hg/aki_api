@@ -15,7 +15,7 @@ japanese_word_blueprint = Blueprint("japanese_word_blueprint", __name__)
 def quiz():
     records = [
         {
-            "quetsion": "ジュース",
+            "question": "ジュース",
             "options": [
                 "【形容词/イ形容词】难懂，费解；难以做到",
                 "【名词】果汁",
@@ -25,7 +25,7 @@ def quiz():
             "answer": "【名词】果汁",
         },
         {
-            "quetsion": "日",
+            "question": "日",
             "options": [
                 "【名词】日，太阳；阳光",
                 "【形容词/イ形容词】难懂，费解；难以做到",
@@ -35,12 +35,12 @@ def quiz():
             "answer": "【名词】日，太阳；阳光",
         },
         {
-            "quetsion": "日",
+            "question": "日",
             "options": ["ひ", "うつくしい", "くさ", "きのう"],
             "answer": "ひ",
         },
         {
-            "quetsion": "新聞社",
+            "question": "新聞社",
             "options": [
                 "【形容词/イ形容词】难懂，费解；难以做到",
                 "【副词】（数量）很多，相当多",
@@ -50,7 +50,7 @@ def quiz():
             "answer": "【名词】报社",
         },
         {
-            "quetsion": "新聞社",
+            "question": "新聞社",
             "options": ["うつくしい", "きのう", "くさ", "しんぶんしゃ"],
             "answer": "しんぶんしゃ",
         },
