@@ -1,4 +1,8 @@
-GET https://japanesejump.com:6699/grammar/?keyword=ようが
+GET http://127.0.0.1:6699/word/quiz
+
+
+###
+GET https://japanesejump.com:6699/grammar/?keyword=に
 
 
 ###
