@@ -28,7 +28,7 @@ def quiz():
 
     target_level = int(keyword)
     if target_level in quiz_cache:
-        return jsonify(quiz_cache[target_level])
+        return jsonify({"words": quiz_cache[target_level]})
 
     files = level_to_files[target_level]
     words = []
