@@ -1,3 +1,4 @@
+import json
 import os
 import time
 from collections import defaultdict
@@ -10,49 +11,34 @@ from tools import update_product_sku
 
 japanese_word_blueprint = Blueprint("japanese_word_blueprint", __name__)
 
+quiz_cache = {}
+
 
 @japanese_word_blueprint.route("/quiz", methods=["GET"])
 def quiz():
-    records = [
-        {
-            "question": "ジュース",
-            "options": [
-                "【形容词/イ形容词】难懂，费解；难以做到",
-                "【名词】果汁",
-                "【副词】（数量）很多，相当多",
-                "【名词】肚子，肠胃",
-            ],
-            "answer": "【名词】果汁",
-        },
-        {
-            "question": "日",
-            "options": [
-                "【名词】日，太阳；阳光",
-                "【形容词/イ形容词】难懂，费解；难以做到",
-                "【副词】（数量）很多，相当多",
-                "【名词】肚子，肠胃",
-            ],
-            "answer": "【名词】日，太阳；阳光",
-        },
-        {
-            "question": "日",
-            "options": ["ひ", "うつくしい", "くさ", "きのう"],
-            "answer": "ひ",
-        },
-        {
-            "question": "新聞社",
-            "options": [
-                "【形容词/イ形容词】难懂，费解；难以做到",
-                "【副词】（数量）很多，相当多",
-                "【名词】报社",
-                "【名词】肚子，肠胃",
-            ],
-            "answer": "【名词】报社",
-        },
-        {
-            "question": "新聞社",
-            "options": ["うつくしい", "きのう", "くさ", "しんぶんしゃ"],
-            "answer": "しんぶんしゃ",
-        },
-    ]
-    return jsonify(choice(records))
+    global quiz_cache
+    keyword = request.args.get("level")
+    level_to_files = {
+        0: ["kana_quiz.json"],
+        1: ["N5_words.json", "N4_words.json"],
+        2: ["N3_words.json", "N2_words.json"],
+        3: ["N1_words.json"],
+        4: ["words_10000.json"],
+    }
+
+    target_level = int(keyword)
+    if target_level in quiz_cache:
+        return jsonify(quiz_cache[target_level])
+
+    files = level_to_files[target_level]
+    words = []
+    folder_path = os.path.join(
+        os.path.dirname(os.path.abspath(__file__)), "japanese_words"
+    )
+    for file_name in files:
+        file_path = os.path.join(folder_path, file_name)
+        with open(file_path, "r", encoding="utf-8") as fp:
+            words += json.loads(fp.read())
+
+    quiz_cache[target_level] = words
+    return jsonify({"words": words})
