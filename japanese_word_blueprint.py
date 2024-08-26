@@ -17,7 +17,9 @@ quiz_cache = {}
 @japanese_word_blueprint.route("/quiz", methods=["GET"])
 def quiz():
     global quiz_cache
-    keyword = request.args.get("level")
+    level = int(request.args.get("level"))
+    start_index = int(request.args.get("start") or 0)
+    batch_size = 1000
     level_to_files = {
         0: ["kana_quiz.json"],
         1: ["N5_words.json", "N4_words.json"],
@@ -26,11 +28,17 @@ def quiz():
         4: ["words_10000.json"],
     }
 
-    target_level = int(keyword)
-    if target_level in quiz_cache:
-        return jsonify({"words": quiz_cache[target_level]})
+    if level in quiz_cache:
+        return jsonify(
+            {
+                "words": quiz_cache[level][start_index : start_index + batch_size],
+                "finished": start_index + batch_size >= len(quiz_cache[level]),
+                "start_index": start_index,
+                "total": len(quiz_cache[level]),
+            }
+        )
 
-    files = level_to_files[target_level]
+    files = level_to_files[level]
     words = []
     folder_path = os.path.join(
         os.path.dirname(os.path.abspath(__file__)), "japanese_words"
@@ -40,5 +48,12 @@ def quiz():
         with open(file_path, "r", encoding="utf-8") as fp:
             words += json.loads(fp.read())
 
-    quiz_cache[target_level] = words
-    return jsonify({"words": words})
+    quiz_cache[level] = words
+    return jsonify(
+        {
+            "words": quiz_cache[level][start_index : start_index + batch_size],
+            "finished": start_index + batch_size >= len(quiz_cache[level]),
+            "start_index": start_index,
+            "total": len(quiz_cache[level]),
+        }
+    )
