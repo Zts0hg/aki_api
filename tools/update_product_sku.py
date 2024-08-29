@@ -100,29 +100,30 @@ def trigger_xm_sync_stock(shop_id, item_id):
 
 def get_shoplist():
     cookies = {
-        "Hm_lvt_a9dd154bf075440d56c848e86a69aee8": "1719130817,1719330836,1719723772,1720638209",
-        "HMACCOUNT": "583152D75F8BEFB6",
-        "XMSESSID": "0806bf6df12fc0087e899fff019ca897172123200811620610081",
         "country": "cn",
-        "Hm_lpvt_a9dd154bf075440d56c848e86a69aee8": "1721616332",
+        "XMSESSID": "bbb6646e734007d457c5586b1ef1336b172491988911247229421",
+        "Hm_lvt_a3dba22a8a9580bb589808538600fbae": "1724919892",
+        "HMACCOUNT": "583152D75F8BEFB6",
+        "Hm_lpvt_a3dba22a8a9580bb589808538600fbae": "1724919916",
     }
 
     headers = {
-        "Accept": "*/*",
-        "Accept-Language": "en,zh-CN;q=0.9,zh;q=0.8",
-        "Cache-Control": "no-cache",
-        "Connection": "keep-alive",
-        "Content-Type": "application/json; charset=UTF-8",
-        "Origin": "https://xmhelper.com",
-        "Pragma": "no-cache",
-        "Referer": "https://xmhelper.com/selectshop",
-        "Sec-Fetch-Dest": "empty",
-        "Sec-Fetch-Mode": "cors",
-        "Sec-Fetch-Site": "same-origin",
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
-        "sec-ch-ua": '"Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"',
+        "accept": "*/*",
+        "accept-language": "en,zh-CN;q=0.9,zh;q=0.8",
+        "cache-control": "no-cache",
+        "content-type": "application/json; charset=UTF-8",
+        # 'cookie': 'country=cn; XMSESSID=bbb6646e734007d457c5586b1ef1336b172491988911247229421; Hm_lvt_a3dba22a8a9580bb589808538600fbae=1724919892; HMACCOUNT=583152D75F8BEFB6; Hm_lpvt_a3dba22a8a9580bb589808538600fbae=1724919916',
+        "origin": "https://xmhelper.com",
+        "pragma": "no-cache",
+        "priority": "u=1, i",
+        "referer": "https://xmhelper.com/selectshop",
+        "sec-ch-ua": '"Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"',
         "sec-ch-ua-mobile": "?0",
         "sec-ch-ua-platform": '"Windows"',
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
         "xm-lang": "cn",
         "xm-lazadadomain": "lazada.com.ph",
         "xm-shopeedomain": "shopee.ph",
@@ -139,8 +140,11 @@ def get_shoplist():
     )
     return response.json()["data"]["shops"]
 
+
 shops = get_shoplist()
-shop_id_to_my_name = {shop["shop_id"]: shop["my_name"] or shop["shop_name"] for shop in shops}
+shop_id_to_my_name = {
+    shop["shop_id"]: shop["my_name"] or shop["shop_name"] for shop in shops
+}
 
 column_name_mapping = {
     "PSKU\n相同PSKU判断为同一款商品\nThe same PSKU is judged to be the same product": "PSKU",
@@ -245,25 +249,31 @@ def update_product_sku(
     ),
 )
 def get_shopeeproduct_list(shop_id):
+    # https://xmhelper.com/app/stock/list -> 关联商品
+    # Network -> list
     cookies = {
-        "Hm_lvt_a9dd154bf075440d56c848e86a69aee8": "1719130817,1719330836,1719723772,1720638209",
+        "XMSESSID": "52eecd5b7a66387d95e17176f2cb307e172391321916523216751",
+        "country": "sg",
+        "Hm_lvt_a9dd154bf075440d56c848e86a69aee8": "1722492823,1724920356",
         "HMACCOUNT": "583152D75F8BEFB6",
-        "XMSESSID": "0806bf6df12fc0087e899fff019ca897172123200811620610081",
-        "Hm_lpvt_a9dd154bf075440d56c848e86a69aee8": "1721646427",
+        "Hm_lpvt_a9dd154bf075440d56c848e86a69aee8": "1724920382",
     }
 
     headers = {
         "Accept": "*/*",
-        "Accept-Language": "zh-CN,zh;q=0.9",
+        "Accept-Language": "en,zh-CN;q=0.9,zh;q=0.8",
+        "Cache-Control": "no-cache",
         "Connection": "keep-alive",
         "Content-Type": "application/json; charset=UTF-8",
+        # 'Cookie': 'XMSESSID=52eecd5b7a66387d95e17176f2cb307e172391321916523216751; country=sg; Hm_lvt_a9dd154bf075440d56c848e86a69aee8=1722492823,1724920356; HMACCOUNT=583152D75F8BEFB6; Hm_lpvt_a9dd154bf075440d56c848e86a69aee8=1724920382',
         "Origin": "https://xmhelper.com",
+        "Pragma": "no-cache",
         "Referer": "https://xmhelper.com/app/stock/list",
         "Sec-Fetch-Dest": "empty",
         "Sec-Fetch-Mode": "cors",
         "Sec-Fetch-Site": "same-origin",
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
-        "sec-ch-ua": '"Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"',
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
+        "sec-ch-ua": '"Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"',
         "sec-ch-ua-mobile": "?0",
         "sec-ch-ua-platform": '"Windows"',
         "xm-lang": "cn",
@@ -380,7 +390,6 @@ def get_sku(detail, color_mapping, all_stand_sku_set):
             option = pre_pattern.sub(r"\1-", option)
 
         parts.append(option)
-
 
     if need_add_item_sku:
         parts = [item_sku] + parts
@@ -528,8 +537,7 @@ def start_sync_sku():
     print = logger.info
     current_folder = os.path.dirname(os.path.abspath(__file__))
     try:
-        sku_file_path = os.path.join(current_folder, "all_sku.xlsx"
-        )
+        sku_file_path = os.path.join(current_folder, "all_sku.xlsx")
 
         print(f"Using SKU file: {os.path.basename(sku_file_path)}")
         df_mapping = pd.read_excel(sku_file_path, dtype=str, skiprows=1).fillna("")
@@ -587,7 +595,7 @@ def start_sync_sku():
 
         df_res = pd.DataFrame(all_sku_details)
 
-        df_res.to_csv(os.path.join(current_folder, "all_sku_details.csv") , index=False)
+        df_res.to_csv(os.path.join(current_folder, "all_sku_details.csv"), index=False)
         print(df_res.columns)
         print(df_res.shape)
         df_res["matched"] = df_res.calculated_sku.isin(all_stand_sku_set)
@@ -608,10 +616,9 @@ def start_sync_sku():
             else:
                 no_matched.loc[index, "error_type"] = "其他错误"
 
-        no_matched[["stock", "my_name", "item_sku", "name", "calculated_sku", "error_type"]].to_csv(
-           os.path.join(current_folder, "no_matched.csv") , index=False
-        )
-
+        no_matched[
+            ["stock", "my_name", "item_sku", "name", "calculated_sku", "error_type"]
+        ].to_csv(os.path.join(current_folder, "no_matched.csv"), index=False)
 
         shop_id_to_item_id_to_calculated_sku = defaultdict(dict)
         shop_id_to_item_id_to_calculated_sku = {
@@ -647,7 +654,9 @@ def start_sync_sku():
                     item_id_to_sync = item["item_id"]
 
             if item_id_to_sync:
-                print(f"触发XM后台数据更新, {shop['my_name'] or shop['shop_name']}({shop_id}) 【同步中】")
+                print(
+                    f"触发XM后台数据更新, {shop['my_name'] or shop['shop_name']}({shop_id}) 【同步中】"
+                )
                 sync_result = trigger_xm_sync_stock(shop_id, item_id_to_sync)
                 if sync_result["status"] == 200 and sync_result["message"] == "ok":
                     print(
