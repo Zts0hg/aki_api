@@ -10,36 +10,24 @@ from flask import Blueprint, Flask, jsonify, request
 from tools import update_product_sku
 
 japanese_quiz_blueprint = Blueprint("japanese_quiz_blueprint", __name__)
+current_folder = os.path.dirname(os.path.abspath(__file__))
 
 quiz_cache = {}
 
 
 @japanese_quiz_blueprint.route("/selection/random", methods=["GET"])
 def question_selection():
-    questions = [
-        {
-            "question": "期末試験の結果（　　　　）、卒業できないこともある。",
-            "options": ["からみると", "いかんでは", "に限って", "を機に"],
-            "answer": "いかんでは",
-            "explain": {
-                "option_1": "名 + から見ると: 根据…… （后面常接「～かもしれない」「～こともある」等。）",
-                "option_2": "名（の） + いかんでは: 唯独……、偏偏…… （后项往往是意想不到的事情）",
-                "option_3": "名 + に限って: 从……来看 （可以直接接在表示人物的名词后面）",
-                "option_4": "名 + を機に: 以……为契机、借……的机会",
-            },
-        },
-        {
-            "question": "彼のやったことは、教育者として（　　　　）ことだ。",
-            "options": ["ありがちな", "欠かせない", "あるまじき", "言わずもがなの"],
-            "answer": "あるまじき",
-            "explain": {
-                "option_1": "～がちな: 常常……、动不动就…… （表示常常发生不好的事情）",
-                "option_2": "名 + に欠かせない: 在……方面不可或缺的",
-                "option_3": "动词辞书形 + まじき + 名词: 作为……不该有的……",
-                "option_4": "言わずもがなの + 名: 不应该说的……、不说为妙的……",
-            },
-        },
-    ]
+    if quiz_cache.get("selection_questions"):
+        return jsonify(choice(quiz_cache["selection_questions"]))
+
+    with open(
+        os.path.join(current_folder, "japanese_quiz", "all_select_questions.json"),
+        "r",
+        encoding="utf-8",
+    ) as fp:
+        questions = [json.loads(line) for line in fp.readlines()]
+
+    quiz_cache["selection_questions"] = questions
     return jsonify(choice(questions))
 
 
