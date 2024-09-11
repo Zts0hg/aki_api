@@ -1,4 +1,7 @@
-GET http://127.0.0.1:6699/word/quiz
+GET http://127.0.0.1:6699/word/quiz?level=4
+
+###
+GET http://127.0.0.1:6699/quiz/sort/random
 
 
 ###
