@@ -1,13 +1,8 @@
 import json
 import os
-import time
-from collections import defaultdict
 from random import choice
 
-import pandas as pd
-from flask import Blueprint, Flask, jsonify, request
-
-from tools import update_product_sku
+from flask import Blueprint, jsonify
 
 japanese_quiz_blueprint = Blueprint("japanese_quiz_blueprint", __name__)
 current_folder = os.path.dirname(os.path.abspath(__file__))
