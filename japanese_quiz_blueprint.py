@@ -9,14 +9,13 @@ current_folder = os.path.dirname(os.path.abspath(__file__))
 
 quiz_cache = {}
 
-
 @japanese_quiz_blueprint.route("/selection/random", methods=["GET"])
 def question_selection():
     if quiz_cache.get("selection_questions"):
         return jsonify(choice(quiz_cache["selection_questions"]))
 
     with open(
-        os.path.join(current_folder, "japanese_quiz", "all_selection_questions.json"),
+        os.path.join(current_folder, "japanese_quiz", "all_selection_questions_passed_double_check.json"),
         "r",
         encoding="utf-8",
     ) as fp:
@@ -32,7 +31,7 @@ def question_sort():
         return jsonify(choice(quiz_cache["sort_questions"]))
 
     with open(
-        os.path.join(current_folder, "japanese_quiz", "all_sort_questions.json"),
+        os.path.join(current_folder, "japanese_quiz", "all_sort_questions_passed_double_check.json"),
         "r",
         encoding="utf-8",
     ) as fp:
